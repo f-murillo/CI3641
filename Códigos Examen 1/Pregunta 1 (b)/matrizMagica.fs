@@ -17,7 +17,7 @@ let esMagico (matrix: int[,]) =
     Array.forall ((=) targetSum) (Array.append rowSumas (Array.append colSumas [| sumaDiag1; sumaDiag2 |]))
 
 // Uso del método
-printfn "Introduce la dimension de la matriz: "
+printfn "Introduce el orden de la matriz: "
 let n = Int32.Parse(Console.ReadLine())
 
 // Se crea una matriz de nxn inicializada con ceros
