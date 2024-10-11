@@ -1,3 +1,4 @@
+module moduloPotencia
 open System 
 // Método recursivo para calcular la fórmula del módulo aplicado a potencias
 // Observacion: en F# se debe especificar si un método es o no recursivo
