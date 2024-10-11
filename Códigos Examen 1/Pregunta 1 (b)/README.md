@@ -18,7 +18,8 @@ Los siguientes códigos fueron hechos en F#
         - Se calcula las sumas
         - Se comparan las sumas y se retorna si son iguales o no
 
-* Observación
-    - Por problemas presentados para instalar el entorno de desarrollo de .NET, y por la poca experiencia que se tiene con el lenguaje, se optó por compilar y ejecutar los códigos mediante un compilador online. El usado fue: https://www.tutorialspoint.com/compile_fsharp_online.php
+- Ejecución usando el intérprete de F# (teniendo instalado .NET Core SDK y ubicado en la carpeta donde se encuentra el archivo)
+  > dotnet fsi --exec nombreDeArchivo.fs
+
         
 
