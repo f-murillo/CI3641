@@ -1,3 +1,4 @@
+module matrizMagica
 open System
 // Método que verifica si una matriz cuadrada es mágica
 let esMagico (matrix: int[,]) =
