@@ -18,7 +18,8 @@ Los siguientes códigos fueron hechos en F#
         - Se calcula las sumas
         - Se comparan las sumas y se retorna si son iguales o no
 
-- Ejecución usando el intérprete de F# (teniendo instalado .NET Core SDK y ubicado en la carpeta donde se encuentra el archivo)
+- Ejecución usando el intérprete de F# (teniendo instalado .NET Core SDK y ubicado en la carpeta donde se encuentra el archivo):
+  
       > dotnet fsi --exec nombreDeArchivo.fs
 
         
