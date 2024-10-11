@@ -100,11 +100,13 @@ def main():
                     lenguaje_base, lenguaje_origen, lenguaje_destino = partes[2], partes[3], partes[4]
                     sistema.definir_traductor(lenguaje_base, lenguaje_origen, lenguaje_destino)
                 case _:
+                    # Si el tipo ingresado es incorrecta
                     print(f"Error: no se reconoce el tipo '{tipo}'")  
                                     
         elif partes[0] == "EJECUTABLE":
             sistema.ejecutable(partes[1])
         else:
+            # Si la acción ingresada es incorrecta
             print(f"Error: no se reconoce la accion '{partes[0]}'")    
 
 if __name__ == "__main__":
