@@ -70,11 +70,13 @@ class TestSistema(unittest.TestCase):
         self.assertEqual(self.sistema.traductores['Java'].lenguaje_destino, 'C')
 
     def test_ejecutable_programa_local(self):
+        """Método para probar el caso base de ejecutableRec"""
         self.sistema.definir_programa('fibonacci', 'LOCAL')
         self.sistema.ejecutable('fibonacci')
         self.assertTrue(self.sistema.ejecutableRec('LOCAL'))
 
     def test_ejecutable(self):
+        """Método para probar ejecutable y ejecutableRec"""
         self.sistema.definir_programa('factorial', 'Java')
         self.sistema.definir_interprete('LOCAL', 'Java')
         # Asersión de que el programa factorial sea efectivamente ejecutable
