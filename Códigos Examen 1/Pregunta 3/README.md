@@ -67,16 +67,20 @@ El código para resolver el problema fue hecho en Python
 
 * Ejecución del programa
     - Desde algún editor de código o IDE donde sea posible ejecutar código Python
-    - Desde la terminal: 
+    - Desde la terminal:
+    - 
         > python Pregunta3.py
 
 * Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
     - Para las pruebas
+    - 
         > coverage run -m unittest test_pregunta3.py
 
     - Para un reporte de la cobertura
+    - 
         > coverage report -m
 
     - Si se quiere un reporte de la cobertura hecho en HTML
+    - 
         > coverage html
 
