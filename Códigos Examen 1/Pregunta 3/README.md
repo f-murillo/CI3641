@@ -67,7 +67,7 @@ El código para resolver el problema fue hecho en Python
 
 * Ejecución del programa
     - Desde algún editor de código o IDE donde sea posible ejecutar código Python
-    - Desde la terminal:
+- Desde la terminal:
       
         > python Pregunta3.py
 
