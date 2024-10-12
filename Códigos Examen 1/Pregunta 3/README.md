@@ -71,16 +71,16 @@ Clases y Métodos
         
         > python Pregunta3.py
 
-* Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
-    - Para las pruebas
+Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
+- Para las pruebas
       
         > coverage run -m unittest test_pregunta3.py
 
-    - Para un reporte de la cobertura
+- Para un reporte de la cobertura
       
         > coverage report -m
 
-    - Si se quiere un reporte de la cobertura hecho en HTML
+- Si se quiere un reporte de la cobertura hecho en HTML
       
         > coverage html
 
