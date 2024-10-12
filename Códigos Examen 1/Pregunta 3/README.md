@@ -2,7 +2,7 @@ Pregunta 3 - Franco Murillo - 1610782
 
 El código para resolver el problema fue hecho en Python
 
-* Clases y Métodos
+Clases y Métodos
 
 - Programa: representa los programas que se definirán en el sistema
     - Constructor (__init__):
@@ -65,10 +65,9 @@ El código para resolver el problema fue hecho en Python
                 - Si el usuario escribe EJECUTABLE, debe ingresar el nombre del programa que quiere verificar si se puede ejecutar
                 - Para cualquier otra acción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
 
-* Ejecución del programa
-    - Desde algún editor de código o IDE donde sea posible ejecutar código Python
-- Desde la terminal:
-      
+ Ejecución del programa
+- Desde algún editor de código o IDE donde sea posible ejecutar código Python
+- Desde la terminal:      
         > python Pregunta3.py
 
 * Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
