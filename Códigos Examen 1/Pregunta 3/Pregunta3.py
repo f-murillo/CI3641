@@ -37,7 +37,7 @@ class Sistema:
     def definir_interprete(self, lenguaje_base, lenguaje):
         """Método que define un intérprete de un lenguaje 'a' escrito en un lennguaje 'b' dados"""
         if lenguaje not in self.interpretes:
-            self.interpretes[lenguaje] = {}
+            self.interpretes[lenguaje] = {} # Diccionario para tener varios interpretes para un mismo lenguaje
         # Si ya el intérprete está definido
         if lenguaje_base in self.interpretes[lenguaje]:
             print(f"Error: ya existe un interprete para '{lenguaje}', escrito en '{lenguaje_base}'")
@@ -48,7 +48,7 @@ class Sistema:
 
     def definir_traductor(self, lenguaje_base, lenguaje_origen, lenguaje_destino):
         if lenguaje_origen not in self.traductores:
-            self.traductores[lenguaje_origen] = {}
+            self.traductores[lenguaje_origen] = {} # Diccionario para tener varios traductores para un mismo lenguaje
 
         if lenguaje_destino in self.traductores[lenguaje_origen] and \
            self.traductores[lenguaje_origen][lenguaje_destino].lenguaje_base == lenguaje_base:
@@ -93,8 +93,10 @@ def main():
             print("Saliendo del programa")
             break
         partes = accion.split()
+        # Se verifica la accion ingresada
         if partes[0] == "DEFINIR":
             tipo = partes[1]
+            # Switch para verificar el tipo de la accion 
             match tipo:
                 case "PROGRAMA":
                     nombre, lenguaje = partes[2], partes[3]
@@ -106,11 +108,13 @@ def main():
                     lenguaje_base, lenguaje_origen, lenguaje_destino = partes[2], partes[3], partes[4]
                     sistema.definir_traductor(lenguaje_base, lenguaje_origen, lenguaje_destino)
                 case _:
+                    # Si el tipo es incorrecto
                     print(f"Error: no se reconoce el tipo '{tipo}'")  
                                     
         elif partes[0] == "EJECUTABLE":
             sistema.ejecutable(partes[1])
         else:
+            # Si la accion ingresada es incorrecta
             print(f"Error: no se reconoce la accion '{partes[0]}'")    
 
 if __name__ == "__main__":
