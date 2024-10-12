@@ -67,7 +67,8 @@ Clases y Métodos
 
  Ejecución del programa
 - Desde algún editor de código o IDE donde sea posible ejecutar código Python
-- Desde la terminal:      
+- Desde la terminal:
+        
         > python Pregunta3.py
 
 * Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
