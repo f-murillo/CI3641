@@ -36,7 +36,7 @@ Clases y Métodos
         - Recibe un lenguaje origen, un lenguaje base sobre el cual se escribirá el traductor, y un lenguaje destino al cual se hará la traducción del lenguaje origen
         - Si el lenguaje de origen no está en el diccionario de traductores, se agrega, y como valor se le asigna otro diccionario
             - De esta forma, es posible definir varios traductores para un mismo lenguaje
-        - Si el lenguaje destino está en el diccionario del lenguaje de origen, y el lenguaje base del lenguaje destino en el diccionario es el ingresado por el usuario, imprime un mensaje de error y sale del método
+        - Si el lenguaje destino está en el diccionario del lenguaje de origen, y el lenguaje base (del lenguaje destino en el diccionario) es el ingresado por el usuario, imprime un mensaje de error y sale del método
         - Luego se crea un objeto de tipo Traductor con el lenguaje base, el lenguaje de origen y el lenguaje destino, e imprime un mensaje de éxito de creación
 
     - ejecutable:
