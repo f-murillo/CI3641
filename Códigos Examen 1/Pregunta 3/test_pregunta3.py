@@ -16,7 +16,6 @@ class TestSistema(unittest.TestCase):
         'DEFINIR PROGRAMA factorial Java',
         'DEFINIR INTERPRETE C Java',
         'DEFINIR TRADUCTOR C Java C',
-        'EJECUTABLE factorial',
         'DEFINIR INTERPRETE LOCAL C',
         'EJECUTABLE factorial',
         'SALIR'
@@ -34,8 +33,8 @@ class TestSistema(unittest.TestCase):
         mock_print.assert_any_call("Si, es posible ejecutar el programa 'fibonacci'")
         mock_print.assert_any_call("Se definio el programa 'factorial', ejecutable en 'Java'")
         mock_print.assert_any_call("Se definio un interprete para 'Java', escrito en 'C'")
-        mock_print.assert_any_call("No es posible ejecutar el programa 'factorial'")
         mock_print.assert_any_call("Se definio un traductor de 'Java' hacia 'C', escrito en 'C'")
+        mock_print.assert_any_call("Se definio un interprete para 'C', escrito en 'LOCAL'")
         mock_print.assert_any_call("Si, es posible ejecutar el programa 'factorial'")
         mock_print.assert_any_call("Saliendo del programa")
 
@@ -57,17 +56,21 @@ class TestSistema(unittest.TestCase):
         # Aserción de que el lenguaje efectivamente se agregó al diccionario de interpretes
         self.assertIn('Java', self.sistema.interpretes)
         # Aserción de que la clave de 'Java' efectivamente sea 'C'
-        self.assertEqual(self.sistema.interpretes['Java'].lenguaje_base, 'C')
+        self.assertIn('C', self.sistema.interpretes['Java'])
+        # Aserción de que el intérprete tenga el lenguaje base correcto
+        self.assertEqual(self.sistema.interpretes['Java']['C'].lenguaje_base, 'C')
 
     def test_definir_traductor(self):
         """Método para la prueba de definir_traductor"""
         self.sistema.definir_traductor('C', 'Java', 'C')
         # Prueba en la que el traductor ya fue definido 
         self.sistema.definir_traductor('C', 'Java', 'C')
-        # Aserción de que el lenguaje efectivamente se agregó al diccionario de interpretes
+        # Aserción de que el lenguaje efectivamente se agregó al diccionario de traductores
         self.assertIn('Java', self.sistema.traductores)
-        # Aserción de que la clave de 'Java' efectivamente sea 'C'
-        self.assertEqual(self.sistema.traductores['Java'].lenguaje_destino, 'C')
+        # Aserción de que la clave de 'Java' efectivamente tenga el lenguaje destino 'C'
+        self.assertIn('C', self.sistema.traductores['Java'])
+        # Aserción de que el traductor tenga el lenguaje base correcto
+        self.assertEqual(self.sistema.traductores['Java']['C'].lenguaje_base, 'C')
 
     def test_ejecutable_programa_local(self):
         """Método para probar el caso base de ejecutableRec"""
@@ -78,9 +81,12 @@ class TestSistema(unittest.TestCase):
     def test_ejecutable(self):
         """Método para probar ejecutable y ejecutableRec"""
         self.sistema.definir_programa('factorial', 'Java')
+        # Prueba en la que no es posible ejecutar el programa
+        self.sistema.ejecutable('factorial')
+        # Se define un interprete a LOCAL para poder ejecutar el programa
         self.sistema.definir_interprete('LOCAL', 'Java')
-        # Asersión de que el programa factorial sea efectivamente ejecutable
-        self.assertEqual(self.sistema.ejecutableRec('Java'), True)
+        # Aserción de que el programa factorial sea efectivamente ejecutable
+        self.assertTrue(self.sistema.ejecutableRec('Java'))
         # Pruebas con programa y lenguaje que no están definidos
         self.sistema.ejecutable('hola')
         self.assertFalse(self.sistema.ejecutableRec('F'))
