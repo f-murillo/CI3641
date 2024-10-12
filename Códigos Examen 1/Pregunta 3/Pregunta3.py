@@ -36,20 +36,26 @@ class Sistema:
 
     def definir_interprete(self, lenguaje_base, lenguaje):
         """Método que define un intérprete de un lenguaje 'a' escrito en un lennguaje 'b' dados"""
+        if lenguaje not in self.interpretes:
+            self.interpretes[lenguaje] = {}
         # Si ya el intérprete está definido
-        if lenguaje in self.interpretes:
+        if lenguaje_base in self.interpretes[lenguaje]:
             print(f"Error: ya existe un interprete para '{lenguaje}', escrito en '{lenguaje_base}'")
             return
-        self.interpretes[lenguaje] = Interprete(lenguaje_base, lenguaje)
+        
+        self.interpretes[lenguaje][lenguaje_base] = Interprete(lenguaje_base, lenguaje)
         print(f"Se definio un interprete para '{lenguaje}', escrito en '{lenguaje_base}'")
 
     def definir_traductor(self, lenguaje_base, lenguaje_origen, lenguaje_destino):
-        """Método que define un traductor de un lenguaje 'a' hacia un lenguaje 'b' escrito en un lenguaje 'c' """
-        # Si ya el traductor está definido
-        if lenguaje_origen in self.traductores:
-            print(f"Error: ya existe un traductor de '{lenguaje_origen}', hacia '{lenguaje_destino}', escrito en '{lenguaje_base}'")
+        if lenguaje_origen not in self.traductores:
+            self.traductores[lenguaje_origen] = {}
+
+        if lenguaje_destino in self.traductores[lenguaje_origen] and \
+           self.traductores[lenguaje_origen][lenguaje_destino].lenguaje_base == lenguaje_base:
+            print(f"Error: ya existe un traductor de '{lenguaje_origen}' hacia '{lenguaje_destino}', escrito en '{lenguaje_base}'")
             return
-        self.traductores[lenguaje_origen] = Traductor(lenguaje_base, lenguaje_origen, lenguaje_destino)
+
+        self.traductores[lenguaje_origen][lenguaje_destino] = Traductor(lenguaje_base, lenguaje_origen, lenguaje_destino)
         print(f"Se definio un traductor de '{lenguaje_origen}' hacia '{lenguaje_destino}', escrito en '{lenguaje_base}'")
 
     def ejecutable(self, nombre):
@@ -70,10 +76,10 @@ class Sistema:
         if lenguaje == "LOCAL": # Caso base
             return True
         # Si el lenguaje está entre los intérpretes y si el método recursivo sobre la base del lenguaje retorna true
-        if lenguaje in self.interpretes and self.ejecutableRec(self.interpretes[lenguaje].lenguaje_base): 
+        if lenguaje in self.interpretes and any(self.ejecutableRec(base) for base in self.interpretes[lenguaje]):
             return True
         # Si el lenguaje está entre los traductores y si el método recursivo sobre la base del lenguaje retorna true
-        if lenguaje in self.traductores and self.ejecutableRec(self.traductores[lenguaje].lenguaje_base):
+        if lenguaje in self.traductores and any(self.ejecutableRec(destino) for destino in self.traductores[lenguaje]):
             return True
         # Si no se cumple ninguna condición, el programa no es ejecutable
         return False
@@ -100,13 +106,11 @@ def main():
                     lenguaje_base, lenguaje_origen, lenguaje_destino = partes[2], partes[3], partes[4]
                     sistema.definir_traductor(lenguaje_base, lenguaje_origen, lenguaje_destino)
                 case _:
-                    # Si el tipo ingresado es incorrecta
                     print(f"Error: no se reconoce el tipo '{tipo}'")  
                                     
         elif partes[0] == "EJECUTABLE":
             sistema.ejecutable(partes[1])
         else:
-            # Si la acción ingresada es incorrecta
             print(f"Error: no se reconoce la accion '{partes[0]}'")    
 
 if __name__ == "__main__":
