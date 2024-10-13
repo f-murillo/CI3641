@@ -89,14 +89,14 @@ c = Cuaternion(9, 10, 11, 12)
 print(f"a = {a}")
 print(f"b = {b}")
 print(f"c = {c}")
-print(f"a + b = {a + b}")       # Suma de cuaterniones
-print(f"~a = {~a}")          # Conjugada de un cuaternión
-print(f"a * b = {a * b}")       # Producto de cuaterniones
-print(f"abs(c) = {abs(c)}")      # Medida o valor absoluto de un cuaternión
-print(f"b + 3 = {b + 3}")       # Suma de un cuaternión con un número entero
-print(f"3 + b = {3 + b}")       # Al reves
-print(f"a * 3.0 = {a * 3.0}")     # Producto de un cuaternión con un número real
+print(f"a + b = {a + b}")         # Suma de cuaterniones
+print(f"~a = {~a}")               # Conjugada de un cuaternión
+print(f"a * b = {a * b}")         # Producto de cuaterniones
+print(f"abs(c) = {abs(c)}")       # Valor absoluto de un cuaternión
+print(f"b + 3 = {b + 3}")         # Suma de un cuaternión con un entero
+print(f"3 + b = {3 + b}")         # Al reves
+print(f"a * 3.0 = {a * 3.0}")     # Producto de un cuaternión con un real
 print(f"3.0 * a = {3.0 * a}")     # Al reves
-print(f"(a + b) * (~c) = {(a + b) * (~c)}")  # Expresiones combinadas
+print(f"(a + b) * (~c) = {(a + b) * (~c)}")  # Operaciones combinadas
 
 
