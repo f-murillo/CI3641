@@ -1,5 +1,7 @@
 Pregunta 4 - Franco Murillo - 1610782
 
+Programa que implementa los cuaterniones y sus operaciones
+
 El código para resolver el problema fue hecho en Python
 
 Clases y Métodos
