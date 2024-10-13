@@ -38,7 +38,7 @@ Métodos
 - narayana n, k: Calcula Narayana de n en k
     - Aplica la fórmula: (1/n) * combinatorio(n,k) * combinatorio(n,k-1)
     - Para el calculo del combinatorio, se importó la función __choose__ del módulo __Math.Combinatorics.Exact.Binomial__
-    - Para importar el módulo y sus funciones, es necesario tenerlo instalado:
+- Para importar el módulo y sus funciones, es necesario tenerlo instalado:
 
          > cabal install --lib exact-combinatorics
 
