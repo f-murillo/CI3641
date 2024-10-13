@@ -7,6 +7,7 @@ Se asume que el número ingresado para su cálculo es mayor a cero
 NOTA: el código está lo más compacto que se pudo para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles). Una versión equivalente y más cómoda para leer y entender es la siguiente:
 
 import Math.Combinatorics.Exact.Binomial (choose)
+
 import Data.Bits (shiftR)
 
 trib :: Integer -> Integer
