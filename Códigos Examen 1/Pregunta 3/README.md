@@ -1,5 +1,7 @@
 Pregunta 3 - Franco Murillo - 1610782
 
+Programa que simula programas, intérpretes y traductores basado en los diagramas T
+
 El código para resolver el problema fue hecho en Python
 
 Clases y Métodos
