@@ -8,5 +8,5 @@ trib n
 narayana::Integer->Integer->Integer
 narayana n k=(choose(fromIntegral n)(fromIntegral k)*choose(fromIntegral n)(fromIntegral(k-1)))`div`n
 maldad::Integer->Integer
-maldad n = let pisoLog2 x=fromIntegral(length(takeWhile (>0)(iterate(`shiftR`1)x))-1)
+maldad n = let pisoLog2 x=fromIntegral(length(takeWhile(>0)(iterate(`shiftR`1)x))-1)
             in trib(pisoLog2(narayana n(pisoLog2 n))+1)
