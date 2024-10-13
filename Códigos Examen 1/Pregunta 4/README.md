@@ -28,7 +28,7 @@ Clases y Métodos
             - Retorna la raíz cuadrada de la suma de los componentes al cuadrado
         - __rep__ : Permite tener una representación en String del cuaternion
        
-    - NOTA: no fue posible redefinir "&" para su uso en el programa, por lo que se usa abs
+    - NOTA: no fue posible redefinir "&" para su uso en el programa, por lo que se usa "abs"
 
 Ejecución del programa
 - Desde algún editor de código o IDE donde sea posible ejecutar código Python
