@@ -4,36 +4,9 @@ Programa que calcula los números de la maldad. El problema se resolvió usando 
 
 Se asume que el número ingresado para su cálculo es mayor a cero
 
-NOTA: el código está lo más compacto que se pudo para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles). Una versión equivalente y más cómoda para leer y entender es la siguiente:
+NOTA: el código está lo más compacto que se pudo para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles)
 
-import Math.Combinatorics.Exact.Binomial (choose)
-
-import Data.Bits (shiftR)
-
-trib::Integer->Integer
-trib n
-
-  | n<3=n
-
-  | otherwise=tribs!!fromIntegral n
-
-  where tribs=0:1:2:zipWith3(\a b c->a+b+c)tribs(tail tribs)(drop 2 tribs)
-
-narayana::Integer->Integer->Integer
-narayana n k=(choose(fromIntegral n)(fromIntegral k)*choose(fromIntegral n)(fromIntegral (k-1)))`div`n
-
-maldad::Integer->Integer
-maldad n = let pisoLog2 x=fromIntegral(length(takeWhile (>0)(iterate(`shiftR`1)x))-1)
-
-               logN=pisoLog2 n
-
-               narayanaValor=narayana n logN
-
-               logNnk=pisoLog2 narayanaValor
-               
-           in trib(logNnk+1)
-
-Métodos (se hará el análisis en base a esta versión, ya que es equivalente a la versión final, y solo es para entender su funcionamiento)
+Métodos 
 - trib n: Calcula el n-ésimo número de Tribonacci
     - Caso base: si n es menor que 3, retorna n
     - En otro caso, se crea una lista infinita (tribs) y se calcula su n-ésimo número (con el !!). La función fromIntegral n transforma el n de Integer a Int, ya que la función !! trabaja con Int
@@ -58,9 +31,9 @@ Métodos (se hará el análisis en base a esta versión, ya que es equivalente a
         - Para realizar el bit shifting a la derecha, se importó la función __shiftR__ del módulo __Data.Bits__
         - La función (choose) espera como argumento un Int, por eso se transforman n y k de Integer a Int 
     - Se calcula el piso del logaritmo base 2 de n (pisoLog2 n)
-    - Se calcula el Narayana de n en logN (narayana n logN)
-    - Se calcula el piso del logaritmo base 2 de narayanaValor (pisoLog2 narayanaValor) 
-    - Finalmente, se devuelve la función trib aplicada al valor logNnk+1 (trib (logNnk + 1))
+    - Se calcula el Narayana de n en el resultado anterior (narayana n (pisoLog2))
+    - Se calcula el piso del logaritmo base 2 del resultado anterior (pisoLog2 (narayana n (pisoLog2))) 
+    - Finalmente, se devuelve la función trib aplicada al resultado anterior + 1 (trib(pisoLog2(narayana n(pisoLog2 n))+1))
 
 Ejecución
 
