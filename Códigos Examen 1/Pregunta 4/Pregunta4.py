@@ -98,5 +98,3 @@ print(f"3 + b = {3 + b}")         # Al reves
 print(f"a * 3.0 = {a * 3.0}")     # Producto de un cuaternión con un real
 print(f"3.0 * a = {3.0 * a}")     # Al reves
 print(f"(a + b) * (~c) = {(a + b) * (~c)}")  # Operaciones combinadas
-
-
