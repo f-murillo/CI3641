@@ -40,7 +40,7 @@ Métodos
     - Para el calculo del combinatorio, se importó la función __choose__ del módulo __Math.Combinatorics.Exact.Binomial__
     - Para importar el módulo y sus funciones, es necesario tenerlo instalado:
 
-        > cabal install --lib exact-combinatorics
+         > cabal install --lib exact-combinatorics
 
     - La función (choose) espera como argumento un Int, por eso se transforman n, k y k-1 de Integer a Int con fromIntegral
 
