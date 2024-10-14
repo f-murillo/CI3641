@@ -30,7 +30,7 @@ Métodos
             - drop 2 tribs: la lista tribs menos los dos primero elementos
             - zipWith3 aplica la función lambda sobre las 3 listas, generando una nueva lista
 
-- narayana n, k: Calcula Narayana de n en k. Tipo de la función: __narayana :: Integer -> Integer -> Integer__ (recibe un entero, y devuelve una función que recibe un entero y retorna un entero)
+- narayana n, k: Calcula el Narayana de n en k. Tipo de la función: __narayana :: Integer -> Integer -> Integer__ (recibe un entero, y devuelve una función que recibe un entero y retorna un entero)
     - Aplica la fórmula: (1/n) * combinatorio(n,k) * combinatorio(n,k-1)
     - Para el calculo del combinatorio, se importó la función __choose__ del módulo __Math.Combinatorics.Exact.Binomial__
 - Para importar el módulo y sus funciones, es necesario tenerlo instalado:
