@@ -2,8 +2,8 @@ import Math.Combinatorics.Exact.Binomial(choose)
 import Data.Bits(shiftR)
 trib::Integer->Integer
 trib n
-  | n<3=n
-  | otherwise=tribs!!fromIntegral n
+  |n<3=n
+  |otherwise=tribs!!fromIntegral n
   where tribs=0:1:2:zipWith3(\a b c->a+b+c)tribs(tail tribs)(drop 2 tribs)
 narayana::Integer->Integer->Integer
 narayana n k=(choose(fromIntegral n)(fromIntegral k)*choose(fromIntegral n)(fromIntegral(k-1)))`div`n
