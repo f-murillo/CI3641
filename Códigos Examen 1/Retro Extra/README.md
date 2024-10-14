@@ -2,7 +2,7 @@ Reto - Franco Murillo - 1610782
 
 Programa que calcula los números de la maldad. El problema se resolvió usando Haskell
 
-Se asume que el número ingresado para su cálculo es mayor a cero
+Se asume que el número ingresado para su cálculo es un entero mayor a cero
 
 NOTA: el código está lo más compacto posible para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles). Una versión equivalente (de hecho, es la versión original del programa antes de compactarlo lo máximo posible) y más fácil de comprender es la siguiente (se hará el análisis del funcionamiento del programa sobre esta versión):
 
