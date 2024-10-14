@@ -6,6 +6,7 @@ Se asume que el número ingresado para su cálculo es mayor a cero
 
 NOTA: el código está lo más compacto que se pudo para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles). Una versión equivalente y más fácil de comprender es la siguiente (haremos el análisis sobre esta versión):
 
+```
 import Math.Combinatorics.Exact.Binomial(choose)
 import Data.Bits(shiftR)
 
@@ -17,6 +18,7 @@ narayana n k=(choose(fromIntegral n)(fromIntegral k)*choose(fromIntegral n)(from
 
 maldad :: Integer -> Integer
 maldad n = let pisoLog2 x=fromIntegral(length(takeWhile(>0)(iterate(`shiftR`1)x))-1) in trib(pisoLog2(narayana n(pisoLog2 n))+1)
+```
 
 Métodos 
 - trib n: Calcula el n-ésimo número de Tribonacci. Tipo de la función: __trib::Integer->Integer__ (recibe un entero y devuelve un entero)
