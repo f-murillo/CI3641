@@ -23,7 +23,7 @@ maldad n = let pisoLog2 x=fromIntegral(length(takeWhile(>0)(iterate(`shiftR`1)x)
 Métodos 
 - trib n: Calcula el n-ésimo número de Tribonacci. Tipo de la función: __trib::Integer->Integer__ (recibe un entero y devuelve un entero)
     - Caso base: si n es menor que 3, retorna n
-    - Si no, se crea una lista infinita (tribs) y se calcula su n-ésimo número (con el !!). La función fromIntegral n transforma el n de Integer a Int, ya que la función !! trabaja con Int
+    - Si no, se crea una lista infinita (tribs) y se calcula su n-ésimo número (usando !!). La función fromIntegral n transforma el n de Integer a Int, ya que la función !! trabaja con Int
         - tribs se inicializa con 0,1,2 (los primeros 3 números de Tribonacci). Luego se genera el resto de la lista con zipWith3, el cual recibe una función lambda (que toma 3 elementos y retorna su suma) y tres listas:
             - tribs: la lista original de números de Tribonacci 
             - tail tribs: la lista tribs menos el primer elemento
