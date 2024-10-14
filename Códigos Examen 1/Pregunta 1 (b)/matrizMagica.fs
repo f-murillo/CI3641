@@ -14,7 +14,7 @@ let esMagico (matrix: int[,]) =
     let rowSumas = [| for r in 0 .. size - 1 -> sumaRow r |]  // Suma de cada fila
     let colSumas = [| for c in 0 .. size - 1 -> sumaCol c |]  // Suma de cada columna
 
-    // Se verifica si todas las sumas (filas, columnas, diagonales) son iguales a la suma objetivo
+    // Se verifica (y retorna) si todas las sumas (filas, columnas, diagonales) son iguales a la suma objetivo
     Array.forall ((=) targetSum) (Array.append rowSumas (Array.append colSumas [| sumaDiag1; sumaDiag2 |]))
 
 // Uso del método
