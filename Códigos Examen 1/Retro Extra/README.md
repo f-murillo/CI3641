@@ -4,7 +4,7 @@ Programa que calcula los números de la maldad. El problema se resolvió usando 
 
 Se asume que el número ingresado para su cálculo es mayor a cero
 
-NOTA: el código está lo más compacto que se pudo para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles). Una versión equivalente y más fácil de comprender es la siguiente (haremos el análisis sobre esta versión):
+NOTA: el código está lo más compacto posible para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles). Una versión equivalente y más fácil de comprender es la siguiente (haremos el análisis sobre esta versión):
 
 ```
 import Math.Combinatorics.Exact.Binomial(choose)
