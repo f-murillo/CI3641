@@ -42,7 +42,7 @@ Métodos
 
 - maldad n: Calcula el n-ésimo número de la maldad. Tipo de la función: __maldad::Integer->Integer__ (recibe un entero y retorna un entero)
     - Se declara una función interna que calcula el piso del logaritmo base 2 de x (pisoLog2)
-        - Para ello, se crea una lista (con el interate), en la que se almacena el resultado de hacer bit shifting a la derecha de x (lo cual divide a x entre 2), mientras el resultado sea mayor a 0 (con el takeWhile (>0)); se obtiene la longitud de la lista, y se le resta 1 para obtener el resultado final (ya que inicialmente se agrega a la lista el propio x, el cual no cuenta para el cálculo del logaritmo base 2). Con esto, se obtiene efectivamente el piso del logaritmo base 2 de x
+        - Para ello, se crea una lista (con el interate), en la que se almacena el resultado de hacer un bit shifting a la derecha de x (lo cual divide a x entre 2), mientras el resultado sea mayor a 0 (con el takeWhile (>0)); se obtiene la longitud de la lista, y se le resta 1 para obtener el resultado final (ya que inicialmente se agrega a la lista el propio x, el cual no cuenta para el cálculo del logaritmo base 2). Con esto, se obtiene efectivamente el piso del logaritmo base 2 de x
         - Para realizar el bit shifting a la derecha, se importó la función __shiftR__ del módulo __Data.Bits__
         - La función __shiftR__ espera como argumento un Int, por eso se transforma x de Integer a Int 
     - Se calcula el piso del logaritmo base 2 de n (pisoLog2 n)
