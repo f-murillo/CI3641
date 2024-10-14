@@ -38,7 +38,7 @@ Métodos
         > cabal install --lib exact-combinatorics
 
     - La función (choose) espera como argumento un Int, por eso se transforman n, k y k-1 de Integer a Int con fromIntegral
-    - En la versión final se integró la fórmula de narayana directamente dentro de la función maldad para economizar caracteres
+    - NOTA: en la versión final se integró la fórmula de narayana directamente dentro de la función maldad para economizar caracteres
 
 - maldad n: Calcula el n-ésimo número de la maldad. Tipo de la función: __maldad::Integer->Integer__ (recibe un entero y retorna un entero)
     - Se declara una función interna que calcula el piso del logaritmo base 2 de x (pisoLog2)
