@@ -21,7 +21,7 @@ maldad n = let pisoLog2 x=fromIntegral(length(takeWhile(>0)(iterate(`shiftR`1)x)
 ```
 
 Métodos 
-- trib n: Calcula el n-ésimo número de Tribonacci. Tipo de la función: __trib::Integer->Integer__ (recibe un entero y devuelve un entero)
+- trib n: Calcula el n-ésimo número de Tribonacci. Tipo de la función: __trib :: Integer -> Integer__ (recibe un entero y devuelve un entero)
     - Caso base: si n es menor que 3, retorna n
     - Si no, se crea una lista infinita (tribs) y se calcula su n-ésimo número (usando !!). La función fromIntegral n transforma el n de Integer a Int, ya que la función !! trabaja con Int
         - tribs se inicializa con 0,1,2 (los primeros 3 números de Tribonacci). Luego se genera el resto de la lista con zipWith3, el cual recibe una función lambda (que toma 3 elementos y retorna su suma) y tres listas:
@@ -30,7 +30,7 @@ Métodos
             - drop 2 tribs: la lista tribs menos los dos primero elementos
             - zipWith3 aplica la función lambda sobre las 3 listas, generando una nueva lista
 
-- narayana n, k: Calcula Narayana de n en k. Tipo de la función: __narayana::Integer->Integer->Integer__ (recibe un entero, y devuelve una función que recibe un entero y retorna un entero)
+- narayana n, k: Calcula Narayana de n en k. Tipo de la función: __narayana :: Integer -> Integer -> Integer__ (recibe un entero, y devuelve una función que recibe un entero y retorna un entero)
     - Aplica la fórmula: (1/n) * combinatorio(n,k) * combinatorio(n,k-1)
     - Para el calculo del combinatorio, se importó la función __choose__ del módulo __Math.Combinatorics.Exact.Binomial__
 - Para importar el módulo y sus funciones, es necesario tenerlo instalado:
@@ -40,7 +40,7 @@ Métodos
     - La función __choose__ espera como argumento un Int, por eso se transforman n, k y k-1 de Integer a Int con fromIntegral
     - NOTA: en la versión final se integró la fórmula de narayana directamente dentro de la función maldad para economizar caracteres
 
-- maldad n: Calcula el n-ésimo número de la maldad. Tipo de la función: __maldad::Integer->Integer__ (recibe un entero y retorna un entero)
+- maldad n: Calcula el n-ésimo número de la maldad. Tipo de la función: __maldad :: Integer -> Integer__ (recibe un entero y retorna un entero)
     - Se declara una función interna que calcula el piso del logaritmo base 2 de x (pisoLog2)
         - Para ello, se crea una lista (con el interate), en la que se almacena el resultado de hacer un bit shifting a la derecha de x (lo cual divide a x entre 2), mientras el resultado sea mayor a 0 (con el takeWhile (>0)); se obtiene la longitud de la lista, y se le resta 1 para obtener el resultado final (ya que inicialmente se agrega a la lista el propio x, el cual no cuenta para el cálculo del logaritmo base 2). Con esto, se obtiene efectivamente el piso del logaritmo base 2 de x
         - Para realizar el bit shifting a la derecha, se importó la función __shiftR__ del módulo __Data.Bits__
