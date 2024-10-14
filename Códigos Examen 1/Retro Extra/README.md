@@ -4,7 +4,7 @@ Programa que calcula los números de la maldad. El problema se resolvió usando 
 
 Se asume que el número ingresado para su cálculo es mayor a cero
 
-NOTA: el código está lo más compacto que se pudo (casi sin espacios, y sin tener definidos las funciones) para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles)
+NOTA: el código está lo más compacto que se pudo (casi sin espacios, y sin tener definida las funciones) para poder calificar para el reto (que el código resolviera el problema y contuviera la menor cantidad de caracteres posibles)
 
 Métodos 
 - trib n: Calcula el n-ésimo número de Tribonacci. Tipo de la función: __trib :: Integer -> Integer__ (recibe un entero y devuelve un entero)
