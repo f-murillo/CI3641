@@ -32,7 +32,7 @@ Métodos
         - La función __shiftR__ espera como argumento un Int, por eso se transforma x de Integer a Int 
     - Se calcula el piso del logaritmo base 2 de n (pisoLog2 n)
     - Se calcula el Narayana de n en el resultado anterior (narayana n (pisoLog2))
-    - Se calcula el piso del logaritmo base 2 del resultado anterior (pisoLog2 (narayana n (pisoLog2))) 
+    - Se calcula el piso del logaritmo base 2 del resultado anterior (pisoLog2 (narayana n(pisoLog2))) 
     - Finalmente, se devuelve la función trib aplicada al resultado anterior + 1 (trib(pisoLog2(narayana n(pisoLog2 n))+1))
 
 Ejecución
@@ -47,10 +47,10 @@ Ejecución
 
         ghci> maldad <número>
 
-- Ya que se está en el intérprete, también se puede ejecutar las funciones trib y narayana:
+- Ya que se está en el intérprete de Haskell, también se pueden ejecutar las funciones trib y narayana:
 
         ghci> trib <número>
 
         ghci> narayana <número1> <número2>
 
-NOTA: se decidió trabajar con Integer en lugar de Int, ya que el entero de precisión de Haskell (Integer) permite calcular números de maldad grandes sin overflow, a diferencia del entero del procesador (Int), y la diferencia de tiempo de ejecución entre usar Int o Integer no fue significativo
+NOTA: se decidió trabajar con Integer en lugar de Int, ya que el entero de precisión de Haskell (Integer) permite calcular números de maldad grandes sin overflow (a diferencia de con el entero del procesador, Int), y la diferencia de tiempo de ejecución entre usar Int o Integer no fue significativo
