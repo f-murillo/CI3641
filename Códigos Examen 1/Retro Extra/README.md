@@ -68,4 +68,4 @@ Ejecución
 
         ghci> narayana <número1> <número2>
 
-NOTA: se decidió trabajar con Integer en lugar de Int, ya que el entero de precisión de Haskell (Integer) permite calcular números de maldad grandes sin overflow, a diferencia del entero del procesador (Int), y la diferencia de tiempo de ejecución entre usar Int o Integer no fue significativo
+NOTA: se decidió trabajar con Integer en lugar de Int, ya que el entero de precisión de Haskell (Integer) permite calcular números de maldad grandes sin overflow, a diferencia del entero del procesador (Int), y la diferencia de tiempo de ejecución entre usar Int o Integer no fue significativa
