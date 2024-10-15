@@ -71,6 +71,26 @@ Clases y Métodos
 NOTA: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, SALIR) se deben escribir en mayúsculas; de lo contrario se imprimirá un mensaje de error.
 
 Ejemplo de uso:
+ ```
+Introduce una accion: DEFINIR PROGRAMA hola LOCAL
+Se definio el programa 'hola', ejecutable en 'LOCAL'
+Introduce una accion: EJECUTABLE hola
+Si, es posible ejecutar el programa 'hola'
+Introduce una accion: DEFINIR PROGRAMA fizzbuzz Java
+Se definio el programa 'fizzbuzz', ejecutable en 'Java'
+Introduce una accion: EJECUTABLE fizzbuzz
+No es posible ejecutar el programa 'fizzbuzz'
+Introduce una accion: DEFINIR TRADUCTOR C Java LOCAL
+Se definio un traductor de 'Java' hacia 'LOCAL', escrito en 'C'
+Introduce una accion: EJECUTABLE fizzbuzz
+No es posible ejecutar el programa 'fizzbuzz'
+Introduce una accion: DEFINIR INTERPRETE LOCAL C
+Se definio un interprete para 'C', escrito en 'LOCAL'
+Introduce una accion: EJECUTABLE fizzbuzz
+Si, es posible ejecutar el programa 'fizzbuzz'
+Introduce una accion: SALIR
+Saliendo del programa
+ ```
 
  Ejecución del programa
  - Desde algún editor de código o IDE donde sea posible ejecutar código Python
