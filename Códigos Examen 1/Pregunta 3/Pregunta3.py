@@ -104,20 +104,31 @@ def main():
         partes = accion.split()
         # Se verifica la accion ingresada
         if partes[0] == "DEFINIR":
-            # Si la accion es DEFINIR, y el numero total de parametros es menor a 4 o mayor a 5, se ingreso mal la accion
-            if len(partes) < 4 or len(partes) > 5:
-                print("Error: numero de argumentos incorrecto")
-                continue
             tipo = partes[1]
             # Switch para verificar el tipo de la accion 
             match tipo:
                 case "PROGRAMA":
+                    # Si el número de argumentos es distinto de 4
+                    if len(partes) != 4:
+                        print("Error: numero de argumentos incorrecto")
+                        continue
+                    # Se declara el nombre del programa y el lenguaje, y se llama al método que define el programa
                     nombre, lenguaje = partes[2], partes[3]
                     sistema.definir_programa(nombre, lenguaje)
                 case "INTERPRETE":
+                    # Si el número de argumentos es distinto de 4
+                    if len(partes) != 4:
+                        print("Error: numero de argumentos incorrecto")
+                        continue
+                    # Se declara el lenguaje base y el lenguaje, y se llama al método que define el interprete
                     lenguaje_base, lenguaje = partes[2], partes[3]
                     sistema.definir_interprete(lenguaje_base, lenguaje)
                 case "TRADUCTOR":
+                    # Misma idea que antes, pero si se define aun traductor, el numero de argumentos debe ser 5
+                    if len(partes) != 5:
+                        print("Error: numero de argumentos incorrecto")
+                        continue
+                    # Se declara el lenguaje base, lenguaje origen y lenguaje destino, y se llama al método que define el traductor
                     lenguaje_base, lenguaje_origen, lenguaje_destino = partes[2], partes[3], partes[4]
                     sistema.definir_traductor(lenguaje_base, lenguaje_origen, lenguaje_destino)
                 case _:
