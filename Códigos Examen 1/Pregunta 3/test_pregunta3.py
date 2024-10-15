@@ -10,6 +10,7 @@ class TestSistema(unittest.TestCase):
 
     @patch('builtins.input', side_effect=[
         'HOLA',
+        'DEFINIR PROGRAMA wenas',
         'DEFINIR WTF holamundo C++',
         'DEFINIR PROGRAMA fibonacci LOCAL',
         'EJECUTABLE fibonacci',
@@ -28,6 +29,7 @@ class TestSistema(unittest.TestCase):
 
         # Comprobar que las salidas esperadas se imprimieron
         mock_print.assert_any_call("Error: no se reconoce la accion 'HOLA'")
+        mock_print.assert_any_call("Error: numero de parametros incorrecto")
         mock_print.assert_any_call("Error: no se reconoce el tipo 'WTF'")
         mock_print.assert_any_call("Se definio el programa 'fibonacci', ejecutable en 'LOCAL'")
         mock_print.assert_any_call("Si, es posible ejecutar el programa 'fibonacci'")
@@ -83,13 +85,20 @@ class TestSistema(unittest.TestCase):
         self.sistema.definir_programa('factorial', 'Java')
         # Prueba en la que no es posible ejecutar el programa
         self.sistema.ejecutable('factorial')
-        # Se define un interprete a LOCAL para poder ejecutar el programa
+        # Caso con interprete: se define un interprete a Java escrito en LOCAL
         self.sistema.definir_interprete('LOCAL', 'Java')
         # Aserción de que el programa factorial sea efectivamente ejecutable
         self.assertTrue(self.sistema.ejecutableRec('Java'))
+        # Caso con traductor: se define un traductor de C# a Java escrito en Java
+        self.sistema.definir_traductor('Java', 'C#', 'Java')
+        # Se define un programa en C#
+        self.sistema.definir_programa('fizzbuzz', 'C#')
+        # Se verifica que el programa escrito en C# sea ejecutable
+        self.sistema.ejecutable('fizzbuzz')
         # Pruebas con programa y lenguaje que no están definidos
         self.sistema.ejecutable('hola')
         self.assertFalse(self.sistema.ejecutableRec('F'))
 
 if __name__ == '__main__':
     unittest.main()
+
