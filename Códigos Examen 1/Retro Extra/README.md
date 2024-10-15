@@ -62,7 +62,7 @@ Ejecución
 
         ghci> maldad <número>
 
-- Ya que se está en el intérprete, también se puede ejecutar las funciones trib y narayana (para el caso en que se quiera probar el programa original):
+- Ya que se está en el intérprete, también se puede ejecutar las funciones trib y (para el caso en que se quiera probar el programa original) narayana:
 
         ghci> trib <número>
 
