@@ -52,7 +52,7 @@ Clases y Métodos
         - Caso base: el lenguaje ingresado es LOCAL. En tal caso, retorna True
         - Si no, se hacen dos verificaciones
             - Si el lenguaje ingresado se encuentra en el diccionario de intérpretes, y si para algun lenguaje base (del lenguaje ingresado), el método ejecutableRec retorna True, el programa es ejecutable. Retorna True
-            - Si el lenguaje ingresado se encuentra en el diccionario de traductores, y si para algun lenguaje destino (para el cual el lenguaje ingresado está traducido), el método ejecutableRec retorna True, el programa es ejecutable. Retorna True
+            - Si el lenguaje ingresado se encuentra en el diccionario de traductores, y si para algun lenguaje base y destino (para el cual el lenguaje ingresado está traducido), el método ejecutableRec retorna True, el programa es ejecutable. Retorna True
         - Si ninguna condición se cumple, el programa no es ejecutable. Retorna False
 
     - main():
@@ -64,8 +64,13 @@ Clases y Métodos
                     - INTERPRETE, donde seguidamente se deberá ingresar el lenguaje base sobre el cual se hará el intérprete y luego el lenguaje que se interpretará
                     - TRADUCTOR, donde seguidamente se deberá ingresar el lenguaje base sobre el cual se hará el traductor, el lenguaje de origen que será traducido, y el lenguaje destino hacia donde se traducirá el lenguaje de origen
                     - Para cualquier otra opción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
+                    - Si el usuario escribió DEFINIR, y el número total de argumentos es menor a 4 o mayor a 5, imprime un mensaje de error
                 - Si el usuario escribe EJECUTABLE, debe ingresar el nombre del programa que quiere verificar si se puede ejecutar
                 - Para cualquier otra acción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
+                - 
+NOTA: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, SALIR) se deben escribir en mayúsculas; de lo contrario se imprimirá un mensaje de error.
+
+Ejemplo de uso:
 
  Ejecución del programa
 - Desde algún editor de código o IDE donde sea posible ejecutar código Python
