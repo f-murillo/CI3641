@@ -106,7 +106,7 @@ def main():
         if partes[0] == "DEFINIR":
             # Si la accion es DEFINIR, y el numero total de parametros es menor a 4 o mayor a 5, se ingreso mal la accion
             if len(partes) < 4 or len(partes) > 5:
-                print("Error: numero de parametros incorrecto")
+                print("Error: numero de argumentos incorrecto")
                 continue
             tipo = partes[1]
             # Switch para verificar el tipo de la accion 
