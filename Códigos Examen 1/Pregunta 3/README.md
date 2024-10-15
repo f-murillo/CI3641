@@ -75,9 +75,9 @@ Clases y Métodos
                     - Para cualquier otra opción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
                     - Si el usuario escribió DEFINIR, y el número total de argumentos es menor a 4 o mayor a 5, imprime un mensaje de error
                 - Si el usuario escribe EJECUTABLE, debe ingresar el nombre del programa que quiere verificar si se puede ejecutar
-                        ```
-                        EJECUTABLE <programa>
-                        ```
+                   ```
+                   EJECUTABLE <programa>
+                   ```
                 - Para cualquier otra acción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
               
 NOTA: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, SALIR) se deben escribir en mayúsculas; de lo contrario se imprimirá un mensaje de error.
