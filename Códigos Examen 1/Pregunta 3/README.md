@@ -81,7 +81,7 @@ Clases y Métodos
                    ```
                 - Para cualquier otra acción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
               
-NOTA: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, SALIR) se deben escribir en mayúsculas; de lo contrario se imprimirá un mensaje de error.
+__NOTA__: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, SALIR) se deben escribir en mayúsculas; de lo contrario se imprimirá un mensaje de error.
 
 Ejemplo de uso:
  ```
