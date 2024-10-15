@@ -73,23 +73,23 @@ NOTA: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, 
 Ejemplo de uso:
  ```
 Ingresa una accion: DEFINIR PROGRAMA hola LOCAL
-Se definio el programa 'hola', ejecutable en 'LOCAL'
+    Se definio el programa 'hola', ejecutable en 'LOCAL'
 Ingresa una accion: EJECUTABLE hola
-Si, es posible ejecutar el programa 'hola'
+    Si, es posible ejecutar el programa 'hola'
 Ingresa una accion: DEFINIR PROGRAMA fizzbuzz Java
-Se definio el programa 'fizzbuzz', ejecutable en 'Java'
+    Se definio el programa 'fizzbuzz', ejecutable en 'Java'
 Ingresa una accion: EJECUTABLE fizzbuzz
-No es posible ejecutar el programa 'fizzbuzz'
+    No es posible ejecutar el programa 'fizzbuzz'
 Ingresa una accion: DEFINIR TRADUCTOR C Java LOCAL
-Se definio un traductor de 'Java' hacia 'LOCAL', escrito en 'C'
+    Se definio un traductor de 'Java' hacia 'LOCAL', escrito en 'C'
 Ingresa una accion: EJECUTABLE fizzbuzz
-No es posible ejecutar el programa 'fizzbuzz'
+    No es posible ejecutar el programa 'fizzbuzz'
 Ingresa una accion: DEFINIR INTERPRETE LOCAL C
-Se definio un interprete para 'C', escrito en 'LOCAL'
+    Se definio un interprete para 'C', escrito en 'LOCAL'
 Ingresa una accion: EJECUTABLE fizzbuzz
-Si, es posible ejecutar el programa 'fizzbuzz'
+    Si, es posible ejecutar el programa 'fizzbuzz'
 Ingresa una accion: SALIR
-Saliendo del programa
+    Saliendo del programa
  ```
 
  Ejecución del programa
