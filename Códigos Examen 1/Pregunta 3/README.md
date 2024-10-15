@@ -73,12 +73,12 @@ NOTA: Las palabras clave (DEFINIR, PROGRAMA, INTERPRETE, TRADUCTOR, EJECUTABLE, 
 Ejemplo de uso:
 
  Ejecución del programa
-- Desde algún editor de código o IDE donde sea posible ejecutar código Python
+ - Desde algún editor de código o IDE donde sea posible ejecutar código Python
 - Desde la terminal (estando ubicado en el directorio donde se encuentra el archivo):
   
-  ```
-  > python Pregunta3.py
-  ```
+```
+> python Pregunta3.py
+```
 
 Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
 - Para las pruebas con cobertura
@@ -89,10 +89,10 @@ Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage
 
 - Para un reporte de la cobertura
 ```     
-        > coverage report -m
+> coverage report -m
 ```
 
 - Si se quiere un reporte de la cobertura hecho en HTML
 ```
- > coverage html
+> coverage html
 ```
