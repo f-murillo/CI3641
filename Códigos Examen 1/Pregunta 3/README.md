@@ -73,7 +73,7 @@ Clases y Métodos
                         DEFINIR TRADUCTOR <lenguaje_base> <lenguaje_origen> <lenguaje_destino>
                         ```
                     - Para cualquier otra opción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
-                    - Si el usuario escribió DEFINIR, y el número total de argumentos es menor a 4 o mayor a 5, imprime un mensaje de error
+                    - Si el usuario escribió DEFINIR, y el número total de argumentos es distinto de 4 (para PROGRAMA o INTERPRETE), o distinto de 5 (para TRADUCTOR), se imprime un mensaje de error
                       
                 - Si el usuario escribe EJECUTABLE, debe ingresar el nombre del programa que quiere verificar si se puede ejecutar:
                    ```
