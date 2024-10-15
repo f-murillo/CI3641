@@ -29,7 +29,7 @@ class TestSistema(unittest.TestCase):
 
         # Comprobar que las salidas esperadas se imprimieron
         mock_print.assert_any_call("Error: no se reconoce la accion 'HOLA'")
-        mock_print.assert_any_call("Error: numero de parametros incorrecto")
+        mock_print.assert_any_call("Error: numero de argumentos incorrecto")
         mock_print.assert_any_call("Error: no se reconoce el tipo 'WTF'")
         mock_print.assert_any_call("Se definio el programa 'fibonacci', ejecutable en 'LOCAL'")
         mock_print.assert_any_call("Si, es posible ejecutar el programa 'fibonacci'")
@@ -101,4 +101,3 @@ class TestSistema(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
