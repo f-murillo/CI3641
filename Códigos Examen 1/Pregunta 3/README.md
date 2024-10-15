@@ -88,12 +88,11 @@ Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage
  ```
 
 - Para un reporte de la cobertura
-  ```     
+```     
         > coverage report -m
- ```
+```
 
 - Si se quiere un reporte de la cobertura hecho en HTML
-
- ```
+```
  > coverage html
- ```
+```
