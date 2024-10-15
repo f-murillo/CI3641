@@ -65,7 +65,13 @@ Clases y Métodos
                         DEFINIR PROGRAMA <nombre> <lenguaje>
                         ```
                     - INTERPRETE, donde seguidamente se deberá ingresar el lenguaje base sobre el cual se hará el intérprete y luego el lenguaje que se interpretará
+                        ```
+                        DEFINIR INTERPRETE <lenguaje_base> <lenguaje>
+                        ```
                     - TRADUCTOR, donde seguidamente se deberá ingresar el lenguaje base sobre el cual se hará el traductor, el lenguaje de origen que será traducido, y el lenguaje destino hacia donde se traducirá el lenguaje de origen
+                        ```
+                        DEFINIR TRADUCTOR <lenguaje_base> <lenguaje_origen> <lenguaje_destino>
+                        ```
                     - Para cualquier otra opción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
                     - Si el usuario escribió DEFINIR, y el número total de argumentos es menor a 4 o mayor a 5, imprime un mensaje de error
                 - Si el usuario escribe EJECUTABLE, debe ingresar el nombre del programa que quiere verificar si se puede ejecutar
