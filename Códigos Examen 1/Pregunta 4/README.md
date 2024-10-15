@@ -30,12 +30,6 @@ Clases y Métodos
        
     - NOTA: no fue posible redefinir "&" para su uso en el programa, por lo que se usa "abs"
 
-Ejecución del programa
-- Desde algún editor de código o IDE donde sea posible ejecutar código Python
-- Desde la terminal (estando ubicado en el directorio donde se encuentra el archivo):
-        
-        > python Pregunta4.py
-
 Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
 - Para las pruebas con cobertura
       
