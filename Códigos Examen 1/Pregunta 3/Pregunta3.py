@@ -97,7 +97,7 @@ def main():
     # Crear el sistema
     sistema = Sistema()
     while True:
-        accion = input("Introduce una accion: ")
+        accion = input("Ingresa una accion: ")
         if accion == "SALIR":
             print("Saliendo del programa")
             break
