@@ -61,9 +61,9 @@ Clases y Métodos
             - Se pide al usuario que ingrese una acción (que puede comenzar con DEFINIR o EJECUTABLE, o directamente con SALIR para terminar el programa)
                 - Si el usuario escribe DEFINIR, tiene para escoger 3 opciones:
                     - PROGRAMA, donde seguidamente se deberá ingresar el nombre del programa y el lenguaje sobre el que está escrito:
-                    ```
+                        ```
                         DEFINIR PROGRAMA <nombre> <lenguaje>
-                    ```
+                        ```
                     - INTERPRETE, donde seguidamente se deberá ingresar el lenguaje base sobre el cual se hará el intérprete y luego el lenguaje que se interpretará
                     - TRADUCTOR, donde seguidamente se deberá ingresar el lenguaje base sobre el cual se hará el traductor, el lenguaje de origen que será traducido, y el lenguaje destino hacia donde se traducirá el lenguaje de origen
                     - Para cualquier otra opción ingresada, se imprimirá un mensaje de error, y se volverá a pedir una acción al usuario
