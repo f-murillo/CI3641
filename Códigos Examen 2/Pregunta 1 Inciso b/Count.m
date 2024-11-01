@@ -5,8 +5,7 @@ function Count()
        disp('n tiene que ser un entero positivo'); 
        return;
     end
-    m = ['El count de ', num2str(n), ' es: ', num2str(c(n))];
-    disp(m);
+    disp(['El count de ', num2str(n), ' es: ', num2str(c(n))]);
 end
 
 % Método que calcula f(n) como se define en el enunciado de la pregunta
