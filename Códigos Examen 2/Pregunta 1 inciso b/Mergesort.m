@@ -1,16 +1,16 @@
 % Metodo "principal"
 function Mergesort()
-    arreglo = [34, 7, 23, 32, 5, 62, 32, 45, 0];
+    array = [34, 7, 23, 32, 5, 62, 32, 45, 0];
     disp('Arreglo original:');
-    disp(arreglo);
-    sortedArray = merge_sort(arreglo);
+    disp(array);
+    sortedArray = merge_sort(array);
     disp('Arreglo ordenado:');
     disp(sortedArray);
 end
 
-% MÈtodo que aplica Mergesort sobre un arreglo
+% M√©todo que aplica Mergesort sobre un arreglo
 function sortedArray = merge_sort(array)
-    % Caso base: si la longitud del array es 1, ya est· ordenado
+    % Caso base: si la longitud del array es 1, ya est√° ordenado
     if numel(array) <= 1
         sortedArray = array;
         return;
@@ -29,14 +29,14 @@ function sortedArray = merge_sort(array)
     sortedArray = merge(sortedLeft, sortedRight);
 end
 
-% MÈtodo que combina los dos subarreglos ordenados en un solo arreglo
+% M√©todo que combina los dos subarreglos ordenados en un solo arreglo
 % ordenado
 function result = merge(left, right)
-    % Preasignar el tamaÒo del arreglo result
+    % Preasignar el tama√±o del arreglo result
     result = zeros(1, numel(left) + numel(right));
-    i = 1;  % Õndice para left
-    j = 1;  % Õndice para right
-    k = 1;  % Õndice para result
+    i = 1;  % √çndice para left
+    j = 1;  % √çndice para right
+    k = 1;  % √çndice para result
 
     % Fusionar las dos mitades ordenadas
     while i <= numel(left) && j <= numel(right)
