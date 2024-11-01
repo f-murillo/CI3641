@@ -57,7 +57,7 @@ Los siguientes códigos fueron hechos en MATLAB
 
 - Ejecución de los archivos
 
-Desde la terminal de MATLAB 
+    Desde la terminal de MATLAB: 
 
 ```
     >> Count
