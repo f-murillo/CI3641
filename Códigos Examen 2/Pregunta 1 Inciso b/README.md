@@ -2,7 +2,7 @@ Pregunta 1. Inciso b - Franco Murillo 1610782
 
 Los siguientes códigos fueron hechos en MATLAB
 
-1- Count
+- Count
     Sea la función: f(n) = { 
                             n / 2, si n es par
                             3n + 1, si n es impar
@@ -29,7 +29,7 @@ Los siguientes códigos fueron hechos en MATLAB
 
     - Complejidad temporal: Dada la naturaleza del problema, que trata sobre la Conjetura de Collatz, la complejidad temporal puede ser aproximada a O(T(n)), donde T(n) es el número de iteraciones necesarias para que n llegue a 1
 
-2- Mergesort
+- Mergesort
     - Ordena un arreglo de números usando el algoritmo de Mergesort, basado en Divide And Conquer
 
     - Métodos:
