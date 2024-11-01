@@ -52,7 +52,7 @@ Los siguientes códigos fueron hechos en MATLAB
 
     - Complejidad temporal: O(n*logn)
 
-Ejecución de los archivos
+- Ejecución de los archivos
 
 Desde la terminal de MATLAB 
 
