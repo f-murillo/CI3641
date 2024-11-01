@@ -3,10 +3,13 @@ Pregunta 1. Inciso b - Franco Murillo 1610782
 Los siguientes códigos fueron hechos en MATLAB
 
 - Count
-    Sea la función: f(n) = { 
-                            n / 2, si n es par
-                            3n + 1, si n es impar
-                            }
+    Sea la función:
+    ```
+    f(n) = { 
+                n / 2, si n es par
+                3n + 1, si n es impar
+            }
+    ```
     Y sea la función count(n), que calcula el número de aplicaciones consecutivas de f sobre n hasta que el resultado sea 1
 
     - Dado un entero positivo, el programa calcula su count
