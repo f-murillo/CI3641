@@ -11,7 +11,7 @@ Los siguientes códigos fueron hechos en MATLAB
                 3n + 1, si n es impar
             }
     ```
-    Y sea la función count(n), que calcula el número de aplicaciones consecutivas de f sobre n hasta que el resultado sea 1
+    Y sea la función count(n), que cuenta el número de aplicaciones consecutivas de f sobre n hasta que el resultado sea 1
 
     - Dado un entero positivo, el programa calcula su count
 
