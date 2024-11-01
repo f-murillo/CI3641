@@ -1,6 +1,6 @@
 % Método "principal"
 function Count()
-    n = input('Ingresa un número: ');
+    n = input('Ingresa un número n: ');
     if n <= 0 || mod(n,1) ~= 0
        disp('n tiene que ser un entero positivo'); 
        return;
