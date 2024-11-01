@@ -37,7 +37,7 @@ Los siguientes códigos fueron hechos en MATLAB
 *******************************************************************************************************************************************************      
 
 - Mergesort
-    - Ordena un arreglo de números usando el algoritmo de Mergesort, basado en Divide And Conquer
+    - Ordena un arreglo de números usando el algoritmo de Mergesort, el cual hace uso de la técnica Divide And Conquer
 
     - Métodos:
         - Mergesort
