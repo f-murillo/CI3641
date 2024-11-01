@@ -15,7 +15,7 @@ Los siguientes códigos fueron hechos en MATLAB
 
     - Dado un entero positivo, el programa calcula su count
 
-    - Si se ingresa un entero menor o igual a 0, la función count laplicaría la función f a n de manera infinita sin obtener nunca 1
+    - Si se ingresa un entero menor o igual a 0, la función count aplicaría la función f sobre n de manera infinita sin obtener nunca 1
 
     - Métodos:
         - Count
