@@ -3,6 +3,7 @@ Pregunta 1. Inciso b - Franco Murillo 1610782
 Los siguientes códigos fueron hechos en MATLAB
 
 - Count
+  
     Sea la función:
     ```
     f(n) = { 
