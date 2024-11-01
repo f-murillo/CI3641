@@ -1,6 +1,6 @@
-% Método "principal"
+% MÃ©todo "principal"
 function Count()
-    n = input('Ingresa un número: ');
+    n = input('Ingresa un nÃºmero: ');
     if n <= 0 || mod(n,1) ~= 0
        disp('n tiene que ser un entero positivo'); 
        return;
@@ -9,7 +9,7 @@ function Count()
     disp(m);
 end
 
-% Método que calcula f(n) como se define en el enunciado de la pregunta
+% MÃ©todo que calcula f(n) como se define en el enunciado de la pregunta
 function x = f(n)
     if mod(n,2) == 0
         x = n/2;
@@ -18,7 +18,7 @@ function x = f(n)
     end
 end
 
-% Método que cuenta el número de aplicaciones de f sobre n hasta que el
+% MÃ©todo que cuenta el nÃºmero de aplicaciones de f sobre n hasta que el
 % resultado sea 1
 function a = c(n)
     a = 0;
