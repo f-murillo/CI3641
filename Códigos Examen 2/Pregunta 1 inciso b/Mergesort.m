@@ -1,6 +1,6 @@
 % Metodo "principal"
 function Mergesort()
-    array = [34, 7, 23, 32, 5, 62, 32, 45, 0];
+    array = [34, 7.2, 23, 32, 5, 62, 32.3, 45, 0];
     disp('Arreglo original:');
     disp(array);
     sortedArray = merge_sort(array);
