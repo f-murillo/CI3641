@@ -61,7 +61,9 @@ Los siguientes códigos fueron hechos en MATLAB
 
 - Ejecución de los archivos
 
-    Desde la terminal de MATLAB: 
+    - Estando en el archivo desde MATLAB, correr el archivo
+
+    - Desde la terminal de MATLAB: 
 
 ```
     >> Count
