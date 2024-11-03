@@ -58,7 +58,7 @@ def precedencia(op):
 
 def mostrar_pre(expr):
     """
-    Método que muestra una expresión en notación infija a partir de una expresión en notación prefija
+    Método que muestra una expresión en notación infija 
     """
     stack = []
     for e in reversed(expr):  # Leer de derecha a izquierda
@@ -79,7 +79,7 @@ def mostrar_pre(expr):
 
 def mostrar_post(expr):
     """
-    Muestra una expresión en notación infija a partir de una expresión en notación postfija
+    Muestra una expresión en notación infija 
     """
     stack = []
     for e in expr:  # Leer de izquierda a derecha
@@ -102,19 +102,41 @@ def main():
     """Método principal"""
     while True:
         action = input("Ingresa una acción (EVAL, MOSTRAR, SALIR): ")
+        
         # Verificar si la acción es EVAL o MOSTRAR
         if action.startswith("EVAL") or action.startswith("MOSTRAR"):
             acc, order, *expr = action.split()
             # Verificar la validez de los elementos en la expresión
-            error_expr = False
-            for e in expr:
-                if not e.isdigit() and e not in ['+', '-', '*', '/']:
-                    print(f"Error: se ingresó un elemento ({e}) inválido en la expresión")
-                    error_expr = True
-                    break
-            # Si se encontró un error en la expresión, pasar a la siguiente iteración del bucle
-            if error_expr:
+            if len(expr) < 3:
+                print("La expresión debe tener al menos 3 elementos")
                 continue
+            
+            error_e_inv = False # Flag de error en algún elemento de la expresión
+            num_count = 0 # Contador de enteros
+            op_count = 0 # Contador de operadores
+            # Para cada elemento de la expresión
+            for e in expr:
+                # Si el elemento es un entero
+                if e.isdigit():
+                    num_count += 1
+                # Si es un operador
+                elif e in ['+', '-', '*', '/']:
+                    op_count += 1
+                # Si se ingresó un elemento incorrecto
+                else:
+                    print(f"Error: se ingresó un elemento ({e}) inválido en la expresión")
+                    error_e_inv = True
+                    break
+                
+            # Si se encontró un elemento inválido en la expresión, pasar a la siguiente iteración del bucle
+            if error_e_inv:
+                continue
+            
+            # Verificar que haya al menos dos enteros y que el número de enteros sea uno más que el número de operadores
+            if num_count < 2 or num_count != op_count + 1:
+                print("Error: la expresión debe contener al menos dos enteros, y debe haber exactamente un entero más que operadores")
+                continue
+            
             # Manejar acciones EVAL y MOSTRAR
             match acc:
                 case "EVAL":
