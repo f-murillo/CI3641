@@ -72,6 +72,22 @@ Ejecución
 - Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
   ```
   >python Pregunta2.py 
-  ```        
+  ```
+      
+Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
+- Para las pruebas con cobertura
 
+ ```
+ > coverage run -m unittest test_pregunta2.py
+ ```
+
+- Para un reporte de la cobertura
+```     
+> coverage report -m
+```
+
+- Si se quiere un reporte de la cobertura hecho en HTML
+```
+> coverage html
+```
     
