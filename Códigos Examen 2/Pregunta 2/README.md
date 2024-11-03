@@ -43,29 +43,29 @@ Métodos
         - Complejidad temporal: __O(len(expr))__, donde expr es la expresión a mostrar
 
 - __main__: Método principal
-        - Declara un ciclo while que se ejecutará hasta que se desee salir
-            - Pide al usuario que ingrese una opción, las cuales pueden ser EVAL, MOSTRAR o SALIR. La opción ingresada debe estar en mayúsculas
-                - Si se ingresa EVAL, se deberá ingresar un orden de evaluación, el cual debe ser PRE o POST (debe ser ingresado en mayúsculas), seguido de la expresión a evaluar. Por ejemplo:
-                    ```
-                        EVAL PRE - * + 4 8 9 15 
-                    ```
-                    o:
-                    ```
-                        EVAL POST 20 3 * 4 2 7 - * + 
-                    ```
+  - Declara un ciclo while que se ejecutará hasta que se desee salir
+  - Pide al usuario que ingrese una opción, las cuales pueden ser EVAL, MOSTRAR o SALIR. La opción ingresada debe estar en mayúsculas
+  - Si se ingresa EVAL, se deberá ingresar un orden de evaluación, el cual debe ser PRE o POST (debe ser ingresado en mayúsculas), seguido de la expresión a evaluar. Por ejemplo:
+    ```
+    EVAL PRE - * + 4 8 9 15 
+    ```
+    o:
+    ```
+    EVAL POST 20 3 * 4 2 7 - * + 
+    ```
 
-                - Si se ingresa MOSTRAR, al igual que antes, se deberá ingresar el orden de evaluación (PRE o POST, en mayúsculas), seguido de la expresión a evaluar. Por ejemplo:
-                    ```
-                        MOSTRAR PRE - * + 4 8 9 15 
-                    ```
-                    o:
-                    ```
-                        MOSTRAR POST 20 3 * 4 2 7 - * + 
-                    ```
-                - Tanto si se ingresa EVAL, como MOSTRAR, se verificará que efectivamente se ingrese una expresión y un orden, y que dicha expresión y orden sean correctos. Es decir, que el orden sea PRE o POST, que en la expresión haya al menos 3 elementos, y que únicamente tenga enteros y los símbolos '+', '-', '*' o '/'.
-                - Además, se verifica que en la expresión haya k enteros (con k >= 2), y k-1 operadores, y que si se trabaja con orden prefijo primero se ingresen los operadores, y que si se trabaja con postfijo primero se ingresen los enteros.
-                - Si se ingresa SALIR, mostrará un mensaje de salida, y saldrá del ciclo, terminando el programa
-                - Si se ingresa una acción incorrecta, se mostrará un mensaje de error, y volverá a otra iteración del ciclo
+    - Si se ingresa MOSTRAR, al igual que antes, se deberá ingresar el orden de evaluación (PRE o POST, en mayúsculas), seguido de la expresión a evaluar. Por ejemplo:
+      ```
+      MOSTRAR PRE - * + 4 8 9 15 
+      ```
+      o:
+      ```
+       MOSTRAR POST 20 3 * 4 2 7 - * + 
+      ```
+- Tanto si se ingresa EVAL, como MOSTRAR, se verificará que efectivamente se ingrese una expresión y un orden, y que dicha expresión y orden sean correctos. Es decir, que el orden sea PRE o POST, que en la expresión haya al menos 3 elementos, y que únicamente tenga enteros y los símbolos '+', '-', '*' o '/'.
+- Además, se verifica que en la expresión haya k enteros (con k >= 2), y k-1 operadores, y que si se trabaja con orden prefijo primero se ingresen los operadores, y que si se trabaja con postfijo primero se ingresen los enteros.
+- Si se ingresa SALIR, mostrará un mensaje de salida, y saldrá del ciclo, terminando el programa
+- Si se ingresa una acción incorrecta, se mostrará un mensaje de error, y volverá a otra iteración del ciclo
 
 Ejecución
     - Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python
