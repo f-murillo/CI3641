@@ -2,7 +2,7 @@ Pregunta 2 - Franco Murillo 16-10782
 
 Programa que maneja expresiones aritméticas sobre enteros, tanto expresiones escritas en orden pre-fijo como post-fijo
 
-Métodos
+__Métodos__
 
 - __eval_pre__: Evalúa una expresión escrita en orden pre-fijo
         - Inicializa una pila vacía, en la cual se irán empilando los números y operadores
@@ -66,15 +66,17 @@ Métodos
 - Además, se verifica que en la expresión haya k enteros (con k >= 2), y k-1 operadores, y que si se trabaja con orden prefijo primero se ingresen los operadores, y que si se trabaja con postfijo primero se ingresen los enteros.
 - Si se ingresa SALIR, mostrará un mensaje de salida, y saldrá del ciclo, terminando el programa
 - Si se ingresa una acción incorrecta, se mostrará un mensaje de error, y volverá a otra iteración del ciclo
+  
 
-Ejecución
+__Ejecución__
 - Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python
 - Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
   ```
   >python Pregunta2.py 
   ```
+
       
-Ejecución de las pruebas con cobertura (teniendo instalados unittest y coverage)
+__Ejecución de las pruebas con cobertura__ (teniendo instalados unittest y coverage)
 - Para las pruebas con cobertura
 
  ```
