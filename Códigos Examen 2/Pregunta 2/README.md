@@ -54,14 +54,14 @@ __Métodos__
     EVAL POST 20 3 * 4 2 7 - * + 
     ```
 
-    - Si se ingresa MOSTRAR, al igual que antes, se deberá ingresar el orden de evaluación (PRE o POST, en mayúsculas), seguido de la expresión a evaluar. Por ejemplo:
-      ```
-      MOSTRAR PRE - * + 4 8 9 15 
-      ```
-      o:
-      ```
-       MOSTRAR POST 20 3 * 4 2 7 - * + 
-      ```
+  - Si se ingresa MOSTRAR, al igual que antes, se deberá ingresar el orden de evaluación (PRE o POST, en mayúsculas), seguido de la expresión a evaluar. Por ejemplo:
+    ```
+    MOSTRAR PRE - * + 4 8 9 15 
+    ```
+    o:
+    ```
+    MOSTRAR POST 20 3 * 4 2 7 - * + 
+    ```
 - Tanto si se ingresa EVAL, como MOSTRAR, se verificará que efectivamente se ingrese una expresión y un orden, y que dicha expresión y orden sean correctos. Es decir, que el orden sea PRE o POST, que en la expresión haya al menos 3 elementos, y que únicamente tenga enteros y los símbolos '+', '-', '*' o '/'.
 - Además, se verifica que en la expresión haya k enteros (con k >= 2), y k-1 operadores, y que si se trabaja con orden prefijo primero se ingresen los operadores, y que si se trabaja con postfijo primero se ingresen los enteros.
 - Si se ingresa SALIR, mostrará un mensaje de salida, y saldrá del ciclo, terminando el programa
