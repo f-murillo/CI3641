@@ -5,12 +5,12 @@ Programa que maneja expresiones aritméticas sobre enteros, tanto expresiones es
 __Métodos__
 
 - __eval_pre__: Evalúa una expresión escrita en orden pre-fijo
-        - Inicializa una pila vacía, en la cual se irán empilando los números y operadores
-        - Para cada elemento la expresión leído de derecha a izquierda:
-            - Si el elemento es un entero, se empila
-            - Si no, quiere decir que el elemento es un operador, por lo que se desempilan dos números, se operan, y se empila el resultado
-        - Al final, retorna el tope de la pila, que tendrá el resultado de la evaluación
-        - Complejidad temporal: __O(len(expr))__, donde expr es la expresión a evaluar
+  - Inicializa una pila vacía, en la cual se irán empilando los números y operadores
+  - Para cada elemento la expresión leído de derecha a izquierda:
+    - Si el elemento es un entero, se empila
+    - Si no, quiere decir que el elemento es un operador, por lo que se desempilan dos números, se operan, y se empila el resultado
+  - Al final, retorna el tope de la pila, que tendrá el resultado de la evaluación
+  - Complejidad temporal: __O(len(expr))__, donde expr es la expresión a evaluar
 
 - __eval_post__: Evalúa una expresión escrita en orden pre-fijo
         - Inicializa una pila vacía, en la cual se irán empilando los números y operadores
