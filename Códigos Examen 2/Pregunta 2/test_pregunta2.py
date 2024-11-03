@@ -2,7 +2,6 @@ import unittest
 from unittest.mock import patch
 from Pregunta2 import eval_pre, eval_post, mostrar_pre, mostrar_post, main
 
-
 class TestPregunta2(unittest.TestCase):
     """Clase para la prueba del Sistema"""
     def setUp(self):
