@@ -68,10 +68,10 @@ Métodos
 - Si se ingresa una acción incorrecta, se mostrará un mensaje de error, y volverá a otra iteración del ciclo
 
 Ejecución
-    - Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python
-    - Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
-        ```
-            >python Pregunta2.py 
-        ```        
+- Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python
+- Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
+  ```
+  >python Pregunta2.py 
+  ```        
 
     
