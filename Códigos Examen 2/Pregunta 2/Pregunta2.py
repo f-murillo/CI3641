@@ -141,7 +141,7 @@ def main():
         
         # Si la acción no es correcta
         else:
-            print(f"Error: no se reconoce la acción {action}")
+            print("Error: no se reconoce la acción")
 
 if __name__ == "__main__":
     main()
