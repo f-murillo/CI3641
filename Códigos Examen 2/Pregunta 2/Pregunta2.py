@@ -46,7 +46,7 @@ def eval_post(expr):
 
     return stack[0] # El resultado está en el tope de la pila
 
-def precedence(op):
+def precedencia(op):
     """
     Método que devuelve la precedencia de un operador
     """
@@ -68,7 +68,7 @@ def mostrar_pre(expr):
             a = stack.pop()
             b = stack.pop()
             # Añadir paréntesis (si es necesario) para mantener la precedencia
-            if precedence(e) > precedence('+'):
+            if precedencia(e) > precedencia('+'):
                 a = f'({a})' if ' ' in a else a
                 b = f'({b})' if ' ' in b else b
             # Empilar números y operación
@@ -89,7 +89,7 @@ def mostrar_post(expr):
             b = stack.pop()
             a = stack.pop()
             # Añadir paréntesis (si es necesario) para mantener la precedencia
-            if precedence(e) > precedence('+'):
+            if precedencia(e) > precedencia('+'):
                 a = f'({a})' if ' ' in a else a
                 b = f'({b})' if ' ' in b else b
             # Empilar números y operación
@@ -112,7 +112,7 @@ def main():
                     print(f"Error: se ingresó un elemento ({e}) inválido en la expresión")
                     error_expr = True
                     break
-            # Si se encontró un error en la expresión, pasar a la siguiente iteración del while
+            # Si se encontró un error en la expresión, pasar a la siguiente iteración del bucle
             if error_expr:
                 continue
             # Manejar acciones EVAL y MOSTRAR
