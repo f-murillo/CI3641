@@ -62,7 +62,7 @@ __Métodos__
     ```
     MOSTRAR POST 20 3 * 4 2 7 - * + 
     ```
-- Tanto si se ingresa EVAL, como MOSTRAR, se verificará que efectivamente se ingrese una expresión y un orden, y que dicha expresión y orden sean correctos. Es decir, que el orden sea PRE o POST, que en la expresión haya al menos 3 elementos, y que únicamente tenga enteros y los símbolos '+', '-', '*' o '/'.
+- Tanto si se ingresa EVAL, como MOSTRAR, se verificará que efectivamente se ingrese una expresión y un orden, y que éstos sean correctos, es decir, que el orden sea PRE o POST, que en la expresión haya al menos 3 elementos, y que únicamente tenga enteros y los símbolos '+', '-', '*' o '/'.
 - Además, se verifica que en la expresión haya k enteros (con k >= 2), y k-1 operadores, y que si se trabaja con orden prefijo primero se ingresen los operadores, y que si se trabaja con postfijo primero se ingresen los enteros.
 - Si se ingresa SALIR, mostrará un mensaje de salida, y saldrá del ciclo, terminando el programa
 - Si se ingresa una acción incorrecta, se mostrará un mensaje de error, y volverá a otra iteración del ciclo
