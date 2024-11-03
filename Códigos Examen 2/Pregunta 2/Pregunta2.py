@@ -112,7 +112,7 @@ def main():
                     print(f"Error: se ingresó un elemento ({e}) inválido en la expresión")
                     error_expr = True
                     break
-            # Si se encontró un error en la expresión, pasar a la siguiente iteración del bucle
+            # Si se encontró un error en la expresión, pasar a la siguiente iteración del while
             if error_expr:
                 continue
             # Manejar acciones EVAL y MOSTRAR
