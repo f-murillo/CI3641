@@ -103,12 +103,19 @@ def main():
     while True:
         action = input("Ingresa una acción (EVAL, MOSTRAR, SALIR): ")
         
-        # Verificar si la acción es EVAL o MOSTRAR
+        # Si la acción es EVAL o MOSTRAR
         if action.startswith("EVAL") or action.startswith("MOSTRAR"):
-            acc, order, *expr = action.split()
+            # Separar la accion en partes y verificar que haya por lo menos 3 partes
+            partes = action.split()
+            if len(partes) < 3:
+                print("Error: se debe ingresar una acción, un orden y una expresión")
+                continue
+            
+            # Guardar las partes de la accion
+            acc, order, *expr = partes
             # Verificar la validez de los elementos en la expresión
             if len(expr) < 3:
-                print("La expresión debe tener al menos 3 elementos")
+                print("Error: la expresión debe tener al menos 3 elementos")
                 continue
             
             error_e_inv = False # Flag de error en algún elemento de la expresión
@@ -137,25 +144,36 @@ def main():
                 print("Error: la expresión debe contener al menos dos enteros, y debe haber exactamente un entero más que operadores")
                 continue
             
-            # Manejar acciones EVAL y MOSTRAR
-            match acc:
-                case "EVAL":
-                    match order:
-                        case "PRE":
-                            print(eval_pre(expr))
-                        case "POST":
-                            print(eval_post(expr))
-                        case _:
-                            print(f"Error: orden ingresado {order} inválido")
-                case "MOSTRAR":
-                    match order:
-                        case "PRE":
-                            print(mostrar_pre(expr))
-                        case "POST":
-                            print(mostrar_post(expr))
-                        case _:
-                            print(f"Error: orden ingresado {order} inválido")
-        
+            # Si la accion es evaluar o mostrar usando notacion prefija
+            if (acc == "EVAL" or acc == "MOSTRAR") and order == "PRE":
+                # Si primero se ingresa un entero
+                if expr[0].isdigit():
+                    print("Error: en el orden prefijo primero se ingresan los operadores")
+                    continue
+                # Manejar accion
+                match acc:
+                    case "EVAL":
+                        print(eval_pre(expr))
+                    case "MOSTRAR":
+                        print(mostrar_pre(expr))
+                        
+            # Si la accion es evaluar o mostrar usando notacion postfija
+            if (acc == "EVAL" or acc == "MOSTRAR") and order == "POST":
+                # Si primero se ingresa un operador
+                if expr[0] in ['+', '-', '*', '/']:
+                    print("Error: en el orden postfijo primero se ingresan los enteros")
+                    continue
+                # Manejar accion
+                match acc:
+                    case "EVAL":
+                        print(eval_post(expr))
+                    case "MOSTRAR":
+                        print(mostrar_post(expr))
+                        
+            # Si el orden ingresado no es válido
+            if order not in ["PRE", "POST"]:
+                print(f"Error: orden ingresado ({order}) inválido")
+                    
         # Si la acción es SALIR
         elif action == "SALIR":
             print("Saliendo")
@@ -163,7 +181,7 @@ def main():
         
         # Si la acción no es correcta
         else:
-            print("Error: no se reconoce la acción")
+            print(f"Error: no se reconoce la acción {action}")
 
 if __name__ == "__main__":
     main()
