@@ -1,6 +1,6 @@
 Pregunta 4 - Franco Murillo 1610782
 
-Implementación de función f_alpha_beta propuesta en el enunciado de la pregunta
+Implementación de función f_alpha_beta propuesta en el enunciado de la pregunta. El programa fue escrito en Python
 
 Dado que en mi caso X = 7, Y = 8 y Z = 2, se tiene que:
 alpha = ((7+8) mod 5) + 3 = 3 ; beta = ((8+2) mod 5) + 3 = 3
