@@ -18,25 +18,25 @@ __Pregunta4.py__: Contiene los métodos para calcular f_3_3 de manera recursiva 
 Métodos de Pregunta4
 
 __f_3_3__: calcula f_3_3 de un n. Es una traducción literal de la definición recursiva de f_3_3.
-    - Si n está en el intervalo [0,9), retorna n.
-    - Si no, quiere decir que n es mayor o igual que 9, retorna f_3_3(n-3) + f_3_3(n-6) + f_3_3(n-9).
+- Si n está en el intervalo [0,9), retorna n.
+- Si no, quiere decir que n es mayor o igual que 9, retorna f_3_3(n-3) + f_3_3(n-6) + f_3_3(n-9).
 
 __f_3_3_cola__: calcula f_3_3 de un n haciendo uso de recursión de cola.
-    - Usa una función auxiliar f_3_3_aux, que recibe 10 argumentos, (a0, a1, a2, a3, a4, a5, a6, a7, a8), y un i
-        - Si i es igual a n, retorna a0.
-        - Si no, retorna f_3_3_aux con los 8 primeros argumentos corridos una posición adelante, el 9no argumento como a6 + a3 + a0, y el último argumento como i+1.
-    - Finalmente retorna la función f_3_3_aux, donde los primeros 9 argumentos son los primeros 9 números por definición de f_3_3, y como 10mo argumento a 0.
+- Usa una función auxiliar f_3_3_aux, que recibe 10 argumentos, (a0, a1, a2, a3, a4, a5, a6, a7, a8), y un i
+  - Si i es igual a n, retorna a0.
+  - Si no, retorna f_3_3_aux con los 8 primeros argumentos corridos una posición adelante, el 9no argumento como a6 + a3 + a0, y el último argumento como i+1.
+- Finalmente retorna la función f_3_3_aux, donde los primeros 9 argumentos son los primeros 9 números por definición de f_3_3, y como 10mo argumento a 0.
 
  __f_3_3_iterativo__: calcula f_3_3 de un n, basado en la versión de recursión de cola.
-    - Inicializa los primeros 9 números de f_3_3 (a0, a1, a2, a3, a4, a5, a6, a7, a8), y una variable actual en cero.
-    - Itera desde 9 hasta n+1:
-        - Reasigna todas las variables:
-            - A la variable actual le asigna el valor de la suma a6 + a3 + a0.
-            - Al resto de variables los corre una posición hacia adelante, a excepción de la última (a8), a la que le asigna el valor de actual.
-    - Finalmente retorna el valor de actual.
+- Inicializa los primeros 9 números de f_3_3 (a0, a1, a2, a3, a4, a5, a6, a7, a8), y una variable actual en cero.
+- Itera desde 9 hasta n+1:
+  - Reasigna todas las variables:
+  - A la variable actual le asigna el valor de la suma a6 + a3 + a0.
+  - Al resto de variables los corre una posición hacia adelante, a excepción de la última (a8), a la que le asigna el valor de actual.
+- Finalmente retorna el valor de actual.
 
-    - La primera correlación entre la versión recursiva de cola e iterativa está en inicialización de los 9 primeros números de f_3_3 y actual, que corresponde a la primera llamada recursiva de f_3_3_aux, con los 9 primeros números de f_3_3 e i = 0. 
-    - La segunda correlación está en la asignación de a6 + a3 + a0 a actual, la cual corresponde al argumento (a6 + a3 + a0) de la llamada recursiva f_3_3_aux en la recursión de cola.
+- La primera correlación entre la versión recursiva de cola e iterativa está en inicialización de los 9 primeros números de f_3_3 y actual, que corresponde a la primera llamada recursiva de f_3_3_aux, con los 9 primeros números de f_3_3 e i = 0. 
+- La segunda correlación está en la asignación de a6 + a3 + a0 a actual, la cual corresponde al argumento (a6 + a3 + a0) de la llamada recursiva f_3_3_aux en la recursión de cola.
 
 
 __Tiempos.py__: se encarga de calcular los tiempos de ejecución de cada método de f_3_3
