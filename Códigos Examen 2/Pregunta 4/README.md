@@ -28,7 +28,7 @@ __f_3_3_cola__: calcula f_3_3 de un n haciendo uso de recursión de cola.
   - Si no, retorna f_3_3_aux con los 8 primeros argumentos corridos una posición adelante, el 9no argumento como a6 + a3 + a0, y el último argumento como i+1.
 - Finalmente retorna la función f_3_3_aux, donde los primeros 9 argumentos son los primeros 9 números por definición de f_3_3 (0, 1, 2, 3, 4, 5, 6, 7, 8), y como 10mo argumento a 0.
 
- __f_3_3_iterativo__: calcula f_3_3 de un n, basado en la versión de recursión de cola.
+ __f_3_3_iterativo__: calcula f_3_3 de un n de manera iterativa, basado en la versión de recursión de cola.
 - Inicializa los primeros 9 números de f_3_3 (a0, a1, a2, a3, a4, a5, a6, a7, a8), y una variable actual en cero.
 - Itera desde 9 hasta n+1:
   - Reasigna todas las variables:
