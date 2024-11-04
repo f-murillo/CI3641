@@ -18,6 +18,9 @@ def eval_pre(expr):
                 case '*':
                     stack.append(a * b)
                 case '/':
+                    if b == 0:
+                        print("Error: No se puede dividir entre cero")
+                        return
                     stack.append(a // b) # Division entera
 
     return stack[0]  # El resultado está en el tope de la pila
@@ -42,6 +45,9 @@ def eval_post(expr):
                 case '*':
                     stack.append(a * b)
                 case '/':
+                    if b == 0:
+                        print("Error: No se puede dividir entre cero")
+                        return
                     stack.append(a // b) # Division entera
 
     return stack[0] # El resultado está en el tope de la pila
@@ -135,7 +141,7 @@ def main():
                     error_e_inv = True
                     break
                 
-            # Si se encontró un elemento inválido en la expresión, saltar a la siguiente iteración del while
+            # Si se encontró un elemento inválido en la expresión, pasar a la siguiente iteración del bucle
             if error_e_inv:
                 continue
             
@@ -153,7 +159,9 @@ def main():
                 # Manejar accion
                 match acc:
                     case "EVAL":
-                        print(eval_pre(expr))
+                        r = eval_pre(expr)
+                        if r != None:
+                            print(r)
                     case "MOSTRAR":
                         print(mostrar_pre(expr))
                         
@@ -166,6 +174,9 @@ def main():
                 # Manejar accion
                 match acc:
                     case "EVAL":
+                        r = eval_pre(expr)
+                        if r != None:
+                            print(r)
                         print(eval_post(expr))
                     case "MOSTRAR":
                         print(mostrar_post(expr))
