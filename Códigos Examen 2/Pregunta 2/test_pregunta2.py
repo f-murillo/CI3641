@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 from Pregunta2 import eval_pre, eval_post, mostrar_pre, mostrar_post, main
 
+
 class TestPregunta2(unittest.TestCase):
     """Clase para la prueba del Sistema"""
     def setUp(self):
@@ -17,6 +18,7 @@ class TestPregunta2(unittest.TestCase):
         'EVAL PRE 1 2 +',
         'MOSTRAR POST 20 3 * 4 2 7 - * +',
         'EVAL POST + 1 2',
+        'EVAL PRE / 4 0',
         'SALIR'
     ])
     
@@ -34,6 +36,7 @@ class TestPregunta2(unittest.TestCase):
         mock_print.assert_any_call("Error: en el orden prefijo primero se ingresan los operadores")
         mock_print.assert_any_call("20 * 3 + 4 * (2 - 7)")
         mock_print.assert_any_call("Error: en el orden postfijo primero se ingresan los enteros")
+        mock_print.assert_any_call("Error: No se puede dividir entre cero")
         mock_print.assert_any_call("Saliendo")
 
     def test_eval_pre(self):
