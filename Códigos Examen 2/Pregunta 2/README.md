@@ -72,7 +72,7 @@ __Ejecución__
 - Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python.
 - Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
   ```
-  >python Pregunta2.py 
+  > python Pregunta2.py 
   ```
 
       
