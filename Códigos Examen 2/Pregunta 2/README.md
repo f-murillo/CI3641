@@ -2,6 +2,8 @@ Pregunta 2 - Franco Murillo 16-10782
 
 Programa que maneja expresiones aritméticas sobre enteros, tanto expresiones escritas en orden pre-fijo como post-fijo
 
+El programa fue escrito en Python
+
 __Métodos__
 
 - __eval_pre__: Evalúa una expresión escrita en orden pre-fijo.
