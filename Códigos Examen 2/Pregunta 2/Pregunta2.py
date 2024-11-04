@@ -135,7 +135,7 @@ def main():
                     error_e_inv = True
                     break
                 
-            # Si se encontró un elemento inválido en la expresión, pasar a la siguiente iteración del bucle
+            # Si se encontró un elemento inválido en la expresión, saltar a la siguiente iteración del while
             if error_e_inv:
                 continue
             
