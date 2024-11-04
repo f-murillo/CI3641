@@ -44,7 +44,7 @@ __Tiempos.py__: se encarga de calcular los tiempos de ejecución de cada método
 
 - Se importaron las clases time y csv, así como los métodos de Pregunta4.py
 
-- Se calculó el valor de f_3_3(n) desde 0 hasta 85 (se quiso llegar hasta 100, o incluso hasta 90, pero la versión recursiva normal se quedaba pegado)
+- Se calculó el valor de f_3_3(n) desde 0 hasta 85 (se quiso llegar hasta 100, o incluso hasta 90, pero la versión recursiva normal se quedaba pegada)
 
 - Se inicializa una lista con los números de 0 a 85, y las listas que tendrán los tiempos de cada método
 
