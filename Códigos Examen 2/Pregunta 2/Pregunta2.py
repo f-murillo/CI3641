@@ -153,37 +153,35 @@ def main():
             # Si el orden ingresado no es válido
             if order not in ["PRE", "POST"]:
                 print(f"Error: orden ingresado ({order}) inválido")
-                
-            # Si la accion es evaluar o mostrar usando notacion prefija
-            if (acc == "EVAL" or acc == "MOSTRAR") and order == "PRE":
-                # Si primero se ingresa un entero
-                if expr[0].isdigit():
-                    print("Error: en el orden prefijo primero se ingresan los operadores")
-                    continue
-                # Manejar accion
-                match acc:
-                    case "EVAL":
-                        r = eval_pre(expr)
-                        if r != None:
-                            print(r)
-                    case "MOSTRAR":
-                        print(mostrar_pre(expr))
-                        
-            # Si la accion es evaluar o mostrar usando notacion postfija
-            if (acc == "EVAL" or acc == "MOSTRAR") and order == "POST":
-                # Si primero se ingresa un operador
-                if expr[0] in ['+', '-', '*', '/']:
-                    print("Error: en el orden postfijo primero se ingresan los enteros")
-                    continue
-                # Manejar accion
-                match acc:
-                    case "EVAL":
-                        r = eval_pre(expr)
-                        if r != None:
-                            print(r)
-                        print(eval_post(expr))
-                    case "MOSTRAR":
-                        print(mostrar_post(expr))
+
+            # Manejar orden ingresado   
+            match order:
+                case "PRE":
+                    # Si primero se ingresa un entero
+                    if expr[0].isdigit():
+                        print("Error: en el orden prefijo primero se ingresan los operadores")
+                        continue
+                    # Manejar accion
+                    match acc:
+                        case "EVAL":
+                            r = eval_pre(expr)
+                            if r != None: # El unico caso en que r podria ser None es si se intento dividir entre cero
+                                print(r)
+                        case "MOSTRAR":
+                            print(mostrar_pre(expr))  
+                case "POST":
+                    # Si primero se ingresa un operador
+                    if expr[0] in ['+', '-', '*', '/']:
+                        print("Error: en el orden postfijo primero se ingresan los enteros")
+                        continue
+                    # Manejar accion
+                    match acc:
+                        case "EVAL":
+                            r = eval_post(expr)
+                            if r != None:
+                                print(r)
+                        case "MOSTRAR":
+                            print(mostrar_post(expr))
                                             
         # Si la acción es SALIR
         elif action == "SALIR":
