@@ -150,6 +150,10 @@ def main():
                 print("Error: la expresión debe contener al menos dos enteros, y debe haber exactamente un entero más que operadores")
                 continue
             
+            # Si el orden ingresado no es válido
+            if order not in ["PRE", "POST"]:
+                print(f"Error: orden ingresado ({order}) inválido")
+                
             # Si la accion es evaluar o mostrar usando notacion prefija
             if (acc == "EVAL" or acc == "MOSTRAR") and order == "PRE":
                 # Si primero se ingresa un entero
@@ -180,11 +184,7 @@ def main():
                         print(eval_post(expr))
                     case "MOSTRAR":
                         print(mostrar_post(expr))
-                        
-            # Si el orden ingresado no es válido
-            if order not in ["PRE", "POST"]:
-                print(f"Error: orden ingresado ({order}) inválido")
-                    
+                                            
         # Si la acción es SALIR
         elif action == "SALIR":
             print("Saliendo")
