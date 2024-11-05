@@ -26,9 +26,3 @@ def it_ord(ls):
     for sort_l in ord(ls):
         for item in sort_l:
             yield item
-
-
-# Ejemplo de uso
-lst = [1, 3, 3, 2, 1, 0, 3, 4, 5, 2, 1]
-for num in it_ord(lst):
-    print(num)
