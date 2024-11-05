@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int choose(int n, int k) {
+    if (k == 0)
+        return 1;
+    if (k > n)
+        return 0;
+    return choose(n - 1, k - 1) * n / k;
+}
+
+int pisoLog2(int x) {
+    int length = 0;
+    while (x > 0) {
+        x = x >> 1;
+        length++;
+    }
+    return length - 1;
+}
+
+int trib(int n) {
+    if (n < 3)
+        return n;
+    int tribs[100] = {0, 1, 2};  // Asumiendo que n < 100 para simplificar
+    for (int i = 3; i <= n; i++)
+        tribs[i] = tribs[i - 1] + tribs[i - 2] + tribs[i - 3];
+    return tribs[n];
+}
+
+int maldad(int n) {
+    int log2n = pisoLog2(n);
+    return trib(pisoLog2(choose(n, log2n) * choose(n, log2n - 1) / n) + 1);
+}
+
+int main(int argc, char *argv[]) {
+    int n = (argc > 1) ? atoi(argv[1]) : 5;
+    printf("%d\n", maldad(n));
+    return 0;
+}
