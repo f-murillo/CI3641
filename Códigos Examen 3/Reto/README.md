@@ -53,3 +53,11 @@ __maldad__: calcula el número de la maldad
 - No cambia su funcionamiento con respecto a la versión en Haskell
 - Declara una función interna que calcula el piso del logaritmo base 2, la cual hace uso de la función bit_length() de la clase int
 - Hace uso de las funciones trib y narayana para el cálculo del número de la maldad
+
+Ejecución del programa
+- Desde algún editor de código o IDE donde sea posible ejecutar código Python
+- Desde la terminal (estando ubicado en el directorio donde se encuentra el archivo):
+  
+```
+> python reto.py
+```
