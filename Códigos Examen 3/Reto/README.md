@@ -24,9 +24,9 @@ El cambio más significativo entre el código Haskell y el de Python, fue la imp
 
 Funciones
 
-- trib: calcula el n-ésimo número de tribonacci
+__trib__: calcula el n-ésimo número de tribonacci
 
-    - Para poder mejorar la eficiencia del programa en general, era necesario hacer esta función lo más eficiente posible, para lo cual se adaptó la función recursiva. Primero se obtuvo la forma recursiva de cola:
+- Para poder mejorar la eficiencia del programa en general, era necesario hacer esta función lo más eficiente posible, para lo cual se adaptó la función recursiva. Primero se obtuvo la forma recursiva de cola:
 
 ```
 def trib_cola(n):
@@ -37,19 +37,19 @@ def trib_cola(n):
     return trib_aux(0, 1, 2, 3)
 ```
 
-        __trib_cola(n)__
+__trib_cola(n)__
             - Declara una función recursiva auxiliar que lleva por parámetros t1, t2, t3 (acumuladores) e i (iterador)
                 - Si i es igual a n, se retorna la suma de los últimos 3 valores acumulados (ya que al momento de que i sea igual a n, aún no se ha hecho esa última suma)
                 - Si no, retorna la función auxiliar con t2, t3, t1+t2+t3 e i+1 como parámetros
             - Finalmente retorna la función auxiliar con los 3 primeros valores de tribonacci y el iterador i en 3 como argumentos
 
-    - Ya con esta versión recursiva de cola, aumentaba considerablemente la eficiencia de la función, pero fallaba para números muy grandes por tener que hacer demasiadas llamadas recursivas. Por esto se obtuvo la versión iterativa a partir de esta versión, la cual mejora aún más la eficiencia
+- Ya con esta versión recursiva de cola, aumentaba considerablemente la eficiencia de la función, pero fallaba para números muy grandes por tener que hacer demasiadas llamadas recursivas. Por esto se obtuvo la versión iterativa a partir de esta versión, la cual mejora aún más la eficiencia
 
-- narayana: calcula el Narayana de n en k
+__narayana__: calcula el Narayana de n en k
     - No cambia con respecto a la versión en Haskell
     - Hace uso de la función comb() del módulo math
 
-- maldad: calcula el número de la maldad
+__maldad__: calcula el número de la maldad
     - No cambia con respecto a la versión en Haskell
     - Declara una función interna que calcula el piso del logaritmo base 2, la cual hace uso de la función bit_length() de la clase int
     - Hace uso de las funciones trib y narayana para el cálculo del número de la maldad
