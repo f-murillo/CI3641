@@ -26,7 +26,6 @@ def maldad(n):
 def main():
     """Método Principal"""
     n = int(input("Ingresa un número: "))
-    resultado = maldad(n)
-    print(f"maldad({n}) = {resultado}")    
+    print(f"maldad({n}) = {maldad(n)}")
 if __name__ == "__main__":
     main()
