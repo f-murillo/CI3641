@@ -46,13 +46,13 @@ __trib_cola(n)__
 - Ya con esta versión recursiva de cola, aumentaba considerablemente la eficiencia de la función, pero fallaba para números muy grandes por tener que hacer demasiadas llamadas recursivas. Por esto se obtuvo la versión iterativa a partir de esta versión, la cual mejora aún más la eficiencia
 
 __narayana__: calcula el Narayana de n en k
-    - No cambia con respecto a la versión en Haskell
-    - Hace uso de la función comb() del módulo math
+- No cambia con respecto a la versión en Haskell
+- Hace uso de la función comb() del módulo math
 
 __maldad__: calcula el número de la maldad
-    - No cambia con respecto a la versión en Haskell
-    - Declara una función interna que calcula el piso del logaritmo base 2, la cual hace uso de la función bit_length() de la clase int
-    - Hace uso de las funciones trib y narayana para el cálculo del número de la maldad
+- No cambia con respecto a la versión en Haskell
+- Declara una función interna que calcula el piso del logaritmo base 2, la cual hace uso de la función bit_length() de la clase int
+- Hace uso de las funciones trib y narayana para el cálculo del número de la maldad
 
  
 Ejecución del programa
