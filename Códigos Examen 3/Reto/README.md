@@ -38,10 +38,10 @@ def trib_cola(n):
 ```
 
 __trib_cola(n)__
-    - Declara una función recursiva auxiliar que lleva por parámetros t1, t2, t3 (acumuladores) e i (iterador)
-        - Si i es igual a n, se retorna la suma de los últimos 3 valores acumulados (ya que al momento de que i sea igual a n, aún no se ha hecho esa última suma)
-        - Si no, retorna la función auxiliar con t2, t3, t1+t2+t3 e i+1 como parámetros
-    - Finalmente retorna la función auxiliar con los 3 primeros valores de tribonacci y el iterador i en 3 como argumentos
+- Declara una función recursiva auxiliar que lleva por parámetros t1, t2, t3 (acumuladores) e i (iterador)
+  - Si i es igual a n, se retorna la suma de los últimos 3 valores acumulados (ya que al momento de que i sea igual a n, aún no se ha hecho esa última suma)
+  - Si no, retorna la función auxiliar con t2, t3, t1+t2+t3 e i+1 como parámetros
+- Finalmente retorna la función auxiliar con los 3 primeros valores de tribonacci y el iterador i en 3 como argumentos
 
 - Ya con esta versión recursiva de cola, aumentaba considerablemente la eficiencia de la función, pero fallaba para números muy grandes por tener que hacer demasiadas llamadas recursivas. Por esto se obtuvo la versión iterativa a partir de esta versión, la cual mejora aún más la eficiencia
 
