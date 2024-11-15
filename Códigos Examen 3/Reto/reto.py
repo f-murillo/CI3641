@@ -22,3 +22,11 @@ def maldad(n):
     narayana_value = narayana(n, pisoLog2(n))
     trib_value = trib(pisoLog2(narayana_value) + 1)
     return trib_value
+
+def main():
+    """Método Principal"""
+    n = int(input("Ingresa un número: "))
+    resultado = maldad(n)
+    print(f"maldad({n}) = {resultado}")    
+if __name__ == "__main__":
+    main()
