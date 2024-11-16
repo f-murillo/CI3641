@@ -26,7 +26,7 @@ Funciones
 
 __trib__: calcula el n-ésimo número de tribonacci
 
-- Para poder mejorar la eficiencia del programa en general, era necesario hacer esta función lo más eficiente posible, para lo cual se adaptó la función recursiva. Primero se obtuvo la forma recursiva de cola:
+- Para poder mejorar la eficiencia del programa en general, era necesario hacer esta función lo más eficiente posible. Primero se obtuvo la forma recursiva de cola:
 
 ```
 def trib_cola(n):
