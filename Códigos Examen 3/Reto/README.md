@@ -57,8 +57,8 @@ __maldad__: calcula el número de la maldad
 __main__: método principal
 - Pide al usuario que ingrese un n, y verifica que ese n sea mayor o igual que 2
 - Si n es menor que 2:
-      - Si n es 1, pisoLog2(1) = 0, por lo que se llamaría a narayana(1,0), y se intentaría calcular mat.comb(1,-1) (BOOM, explotó el programa)
-      - Si n es 0 o negativo, pisoLog2(n) es indefinido (BOOM, explotó el programa)
+  - Si n es 1, pisoLog2(1) = 0, por lo que se llamaría a narayana(1,0), y se intentaría calcular mat.comb(1,-1) (BOOM, explotó el programa)
+  - Si n es 0 o negativo, pisoLog2(n) es indefinido (BOOM, explotó el programa)
 
 Ejecución del programa
 - Desde algún editor de código o IDE donde sea posible ejecutar código Python
