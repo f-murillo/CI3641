@@ -24,9 +24,6 @@ def maldad(n):
 def main():
     """Método Principal"""
     n = int(input("Ingresa un número: "))
-    if n < 2:
-        print("Error: maldad está definido para n mayor o igual a 2")
-        return
     print(f"maldad({n}) = {maldad(n)}")
 if __name__ == "__main__":
     main()
