@@ -2,6 +2,11 @@ Reto - Franco Murillo 1610782
 
 Implementación de la función maldad(n), de modo que funcione rápidamente para los mayores valores de n posibles
 
+- Se asume que n >= 2, ya que:
+  - Si n = 1, pisoLog2(1) = 0, y en la función narayana(n,k) se intentaría calcular combinatorio(1, -1) (BOOM, explotó el programa)
+  - Si n = 0, pisoLog2(0) = -1 (por la manera en la que se definión pisoLog2), por lo que en narayana(n,k) se intentaría calcular combinatorio(0, -2) (BOOM, explotó el programa)
+  - Si n es negativo, pisoLog2(n) retornaría el mismo resultado que para su versión positiva, pero en narayana(n,k) se intentaría calcular combinatorio(n,k) con n negativo (BOOM, explotó el programa)  
+
 El código fue hecho en Python
 
 Observación: el código fue implementado a partir del código del programa escrito en Haskell para el reto del primer examen:
@@ -53,12 +58,6 @@ __maldad__: calcula el número de la maldad
 - No cambia su funcionamiento con respecto a la versión en Haskell
 - Declara una función interna que calcula el piso del logaritmo base 2, la cual hace uso de la función bit_length() de la clase int
 - Hace uso de las funciones trib y narayana para el cálculo del número de la maldad
-
-__main__: método principal
-- Pide al usuario que ingrese un n, y verifica que ese n sea mayor o igual que 2
-- Si n es menor que 2:
-  - Si n es 1, pisoLog2(1) = 0, por lo que se llamaría a narayana(1,0), y se intentaría calcular mat.comb(1,-1) (BOOM, explotó el programa)
-  - Si n es 0 o negativo, pisoLog2(n) es indefinido (BOOM, explotó el programa)
 
 Ejecución del programa
 - Desde algún editor de código o IDE donde sea posible ejecutar código Python
