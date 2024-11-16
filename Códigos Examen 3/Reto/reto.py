@@ -2,9 +2,7 @@ import math
 
 def trib(n):
     """Método que calcula el n-ésimo número de tribonacci"""    
-    t1 = 0
-    t2 = 1
-    t3 = 2
+    t1, t2, t3 = 0, 1, 2
     for _ in range(3, n + 1):
         t = t1 + t2 + t3
         t1, t2, t3 = t2, t3, t
@@ -26,6 +24,9 @@ def maldad(n):
 def main():
     """Método Principal"""
     n = int(input("Ingresa un número: "))
+    if n < 2:
+        print("Error: maldad está definido para n mayor o igual a 2")
+        return
     print(f"maldad({n}) = {maldad(n)}")
 if __name__ == "__main__":
     main()
