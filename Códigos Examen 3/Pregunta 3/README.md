@@ -27,9 +27,27 @@ __ManejadorTipos__: implementa el manejador de tipos
       - Si el campo es struct, simplemente se suma al tamaño empaquetado la representación obtenida en la recursión; y al tamaño no empaquetado se suma el tamaño no empaquetado obtenida en la recursión
     - Si el campo es union, el tamaño empaquetado será el tamaño del campo más grande; y el tamaño óptimo será el tamaño no empaquetado
     - Si el campo es struct, se agrega el padding necesario para el tamaño no empaquetado
-    - Se retornan el tamaño empaquetado, el tamaño no empaquetado y el tamaño óptimo  
+    - Se retornan el tamaño empaquetado, el tamaño no empaquetado y el tamaño óptimo
+  - __es_union__: verifica si un tipo es union
   - __describir_tipo__: proporciona una descripción del tipo de datos
     - Verifica que el tipo esté definido
     - Si el tipo es atómico, obtiene e imprime su nombre, representación y alineación
-    - Si el tipo es struct, imprime su nombre, y llama a describir_registro con los campos del registro
+    - Si el tipo es compuesto, verifica si es de tipo union o struct, imprime el tipo, y llama al método describir_registro
+  - __describir_registro__: proporciona la descripción de un registro (struct o union)
+    - Calcula el tamaño empaquetado, no empaquetado y óptimo con la función size_alineacion
+    - Imprime los resultados, obteniendo también los bytes desperdiciados en el caso empaquetado y no empaquetado
+
+__main__: método principal
+  - Se crea una instancia del manejador de tipos
+  - Se itera con un while True
+    - Pide al usuario que ingrese una opción
+    - Divide la opción en partes
+    - Verifica el valor de la primera parte (el comando)
+      - Si es "ATOMICO" se verifica que la acción tenga 4 partes (el comando, el nombre, la representación y la alineación); si no es así, imprime un mensaje de error, y se da otra vuelta al ciclo
+        - Obtiene el resto de partes de la acción, y llama al método que agrega el tipo atómico
+       - Si es "STRUCT" se obtiene el resto de partes de la acción, y llama al método que agrega el tipo compuesto (como solo se agregaron dos parámetros, por defecto se sabe que no será un tipo union)
+       - Si es "UNION" se obtiene el resto de partes de la acción, y llama al método que agrega el tipo compuesto (agregando como parámetro que si se trata de un tipo union)
+       - Si es "DESCRIBIR" se verifica que la acción tenga 2 partes (el comando y el nombre del tipo); si no es así, imprime un mensaje de error, y se da otra vuelta al ciclo
+         - Obtiene la otra parte de la acción y llama al método que describe al tipo
+       - Si es "SALIR" imprime un mensaje de finalización del programa, y sale del ciclo
  
