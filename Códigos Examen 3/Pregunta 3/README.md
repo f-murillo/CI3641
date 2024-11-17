@@ -55,7 +55,7 @@ __Ejecución__
 - Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python.
 - Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
   ```
-  > python Pregunta2.py 
+  > python Pregunta3.py 
   ```
 
       
@@ -63,7 +63,7 @@ __Ejecución de las pruebas con cobertura__ (teniendo instalados unittest y cove
 - Para las pruebas con cobertura:
 
  ```
- > coverage run -m unittest test_pregunta2.py
+ > coverage run -m unittest test_pregunta3.py
  ```
 
 - Para un reporte de la cobertura:
