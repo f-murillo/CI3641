@@ -2,7 +2,7 @@ Pregunta 1 - Inciso b - i - Franco Murillo 1610782
 
 Implementación de los numerales de Church, así como las funciones que suman y multiplican pares de numerales de Church
 
-__Clases__
+# __Clases__
 
 Church
   - Es una clase base vacía que se usa para definir la jerarquía de tipo.
@@ -19,7 +19,7 @@ Suc
   - __init__: constructor. Inicializa una instancia de Suc con un predecesor, el cual es otro numeral de Church
   - __str__: Devuelve el String "Suc(<pred>)", donde <pred> es una representación del predecesor
 
-__Funciones__
+# __Funciones__
 
 suma
   - Suma dos numerales de Church a y b recursivamente
