@@ -15,6 +15,8 @@ __ManejadorTipos__: implementa el manejador de tipos
   - __agregar_tipo_atomico__: agrega un nuevo tipo atómico. Verifica que el tipo no haya sido agregado antes
   - __agregar_tipo_compuesto__: agrega un nuevo tipo de registro (struct o union). Verifica que el tipo no haya sido agregado antes, y que los campos estén definidos
   - __agregar_tipo_union__: agrega un nuevo tipo de registro variante. Verifica que el tipo no haya sido agregado antes, y que los campos estén definidos
+  - __size_alineacion__: calcula el tamaño y la alineación de un tipo
+    - Se obtiene el tipo de dato, y se inicializan el tamaño máximo, tamaño empaquetado, tamaño no empaquetado, y la alineación máxima
   - __describir_tipo__: proporciona una descripción del tipo de datos
     - Verifica que el tipo esté definido
     - Si el tipo es atómico, obtiene e imprime su nombre, representación y alineación
