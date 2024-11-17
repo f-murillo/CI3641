@@ -30,7 +30,7 @@ class ConjuntoPersonas:
     def nombre_mas_comun(self):
         """Método que retorna el nombre más común del conjunto"""
         nombres = [persona.nombre for persona in self.personas]
-        if not nombres: # Si no hay nombres (en caso de que no haya conjunto alguno)
+        if not nombres: # Si no hay nombres (en caso de que la lista esté vacía)
             return None
         contador_nombres = Counter(nombres) # Se crea una instancia de Counter
         return contador_nombres.most_common(1)[0][0] # Se retorna el nombre mas comun
