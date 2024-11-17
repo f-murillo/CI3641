@@ -1,6 +1,6 @@
 Pregunta 1 - Inciso b - i - Franco Murillo 1610782
 
-Implementación de los numerales de Church, así como las funciones que suman y multiplican pares de numerales de Church
+# Implementación de los numerales de Church, así como las funciones que suman y multiplican pares de numerales de Church
 
 # __Clases__
 
