@@ -33,5 +33,4 @@ class ConjuntoPersonas:
         if not nombres: # Si no hay nombres (en caso de que no haya conjunto alguno)
             return None
         contador_nombres = Counter(nombres) # Se crea una instancia de Counter
-        nombre_comun = contador_nombres.most_common(1)[0][0] # Se obtiene el nombre mas comun
-        return nombre_comun
+        return contador_nombres.most_common(1)[0][0] # Se retorna el nombre mas comun
