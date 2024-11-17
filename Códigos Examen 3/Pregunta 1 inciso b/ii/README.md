@@ -19,5 +19,5 @@ __ConjuntoPersonas__
     - Crea una lista con los nombres de las personas en la lista
     - Si la lista está vacía, no hay ningún nombre. Retorna None
     - Crea una instancia de Counter con la lista de nombres
-    - Obtiene el nombre más común con most_common(1), el cual retorna una lista de tuplas con los nombres más comunes y sus ocurrencias
+    - Obtiene y retorna el nombre más común con most_common(1), el cual retorna una lista de tuplas con los nombres más comunes y sus ocurrencias
     - Con most_common(1)[0] se obtiene el primer elemento de dicha lista de tuplas; y con most_common(1)[0][0] se obtiene el nombre del primer elemento de la lista de tuplas 
