@@ -51,3 +51,27 @@ __main__: método principal
          - Obtiene la otra parte de la acción y llama al método que describe al tipo
        - Si es "SALIR" imprime un mensaje de finalización del programa, y sale del ciclo
  
+__Ejecución__
+- Desde un IDE o un editor de código con extensiones que permitan correr programas escritos en Python.
+- Desde la terminal (ubicado en el directorio donde se encuentra el archivo):
+  ```
+  > python Pregunta2.py 
+  ```
+
+      
+__Ejecución de las pruebas con cobertura__ (teniendo instalados unittest y coverage)
+- Para las pruebas con cobertura:
+
+ ```
+ > coverage run -m unittest test_pregunta2.py
+ ```
+
+- Para un reporte de la cobertura:
+```     
+> coverage report -m
+```
+
+- Si se quiere un reporte de la cobertura hecho en HTML:
+```
+> coverage html
+```
