@@ -60,7 +60,7 @@ class ManejadorTipos:
             else:
                 raise TypeError(f"Tipo no reconocido: {campo}")
 
-            # Se actualizaa la alineación máxima requerida
+            # Se actualiza la alineación máxima requerida
             max_alineacion = max(max_alineacion, alineacion)
             
             if es_union:
