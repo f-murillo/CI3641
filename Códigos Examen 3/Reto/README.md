@@ -4,7 +4,9 @@ Implementación de la función maldad(n), de modo que funcione rápidamente para
 
 El código fue hecho en Python
 
-Observación: el código fue implementado a partir del código del programa escrito en Haskell para el reto del primer examen:
+Se aumentó el límite en la cantidad de dígitos que se puede manejar en las conversiones de cadenas de enteros (para poder manejar entradas grandes)
+
+Observación: el código que calcula los números de la maldad fue implementado a partir del código escrito en Haskell para el reto del primer examen:
 
 ```
 import Math.Combinatorics.Exact.Binomial(choose)
