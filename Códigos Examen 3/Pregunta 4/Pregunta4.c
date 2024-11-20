@@ -13,7 +13,7 @@ void initialize_matrix(double **matrix, int N, int M) {
     }
 }
 
-// Suma por filas
+// Función que suma por filas
 double sum_by_row(double **matrix, int N, int M) {
     double sum = 0.0;
     for (int i = 0; i < N; ++i) {
@@ -24,7 +24,7 @@ double sum_by_row(double **matrix, int N, int M) {
     return sum;
 }
 
-// Suma por columnas
+// Función que suma por columnas
 double sum_by_column(double **matrix, int N, int M) {
     double sum = 0.0;
     for (int j = 0; j < M; ++j) {
