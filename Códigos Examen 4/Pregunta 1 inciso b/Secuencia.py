@@ -4,15 +4,15 @@ class Secuencia(ABC):
     """Clase abstracta Secuencia"""
     @abstractmethod # Decorator que indica que el método es abstracto (debe ser instanciado por clases que hereden de Secuencia)
     def agregar(self, elemento):
-        """Método abstracto agregar (se implementará en la subclase de Secuencia)"""
+        """Método abstracto agregar (se implementará en las subclases de Secuencia)"""
     
     @abstractmethod
     def remover(self):
-        """Método abstracto remover (se implementará en la subclase de Secuencia)"""
+        """Método abstracto remover (se implementará en las subclases de Secuencia)"""
     
     @abstractmethod
     def vacio(self):
-        """Método abstracto vacio (se implementará en la subclase de Secuencia)"""
+        """Método abstracto vacio (se implementará en las subclases de Secuencia)"""
 
 class Pila(Secuencia):
     """Clase Pila"""
