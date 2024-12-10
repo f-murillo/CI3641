@@ -45,7 +45,7 @@ class DFS(Busqueda):
 
             if nodo not in visitados: # Si el nodo explorado no está en el conjunto de visitados, se agrega
                 visitados.add(nodo)
-                for vecino in self.grafo.obtener_vecinos(nodo): # Para cada vecino del nodo
+                for vecino in self.grafo.obtener_vecinos(nodo): # Para cada vecino del nodo recién agregado
                     if vecino not in visitados: # Si el vecino no ha sido visitado, se empila el vecino, junto con la profundidad en la que se encuentra
                         stack.append((vecino, profundidad + 1))
 
@@ -66,7 +66,7 @@ class BFS(Busqueda):
             if nodo not in visitados: # Si el nodo explorado no está en el conjunto de visitados, se agrega
                 visitados.add(nodo)
                 
-                for vecino in self.grafo.obtener_vecinos(nodo): # Para cada vecino del nodo
+                for vecino in self.grafo.obtener_vecinos(nodo): # Para cada vecino del nodo recién agregado
                     if vecino not in visitados: # Si el vecino no ha sido visitado, se encola el vecino, junto con la capa en la que se encuentra
                         queue.append((vecino, capa + 1))
 
