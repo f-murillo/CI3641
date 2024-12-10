@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from collections import deque
 
 class Grafo:
-    """Clase Grafo (ya que no es especifica en el enunciado, se optó por trabajar con un grafo no dirigido)"""
+    """Clase Grafo (ya que no se especifica en el enunciado, se optó por trabajar con un grafo no dirigido)"""
     def __init__(self):
         """Constructor"""
         self.adjacencias = {} # Diccionario para guardar las adyacencias de cada nodo
