@@ -29,7 +29,7 @@ class Busqueda(ABC):
 
     @abstractmethod
     def buscar(self, D, H):
-        """Función abstracta buscar (se implementará en la subclase que herede de Busqueda)"""
+        """Función abstracta buscar (se implementará en las subclases de Busqueda)"""
   
 class DFS(Busqueda):
     """Clase DFS"""
