@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class Secuencia(ABC):
     """Clase abstracta Secuencia"""
-    @abstractmethod # Decorador que indica que el método debe ser instanciado por clases que hereden de Secuencia
+    @abstractmethod # Decorator que indica que el método es abstracto (debe ser instanciado por clases que hereden de Secuencia)
     def agregar(self, elemento):
         """Método abstracto agregar (se implementará en la subclase que herede de Secuencia)"""
     
