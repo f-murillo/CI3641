@@ -45,7 +45,7 @@ class VirtualMethodTableHandler:
         for method in methods:
             methods_table[method] = f"{class_name} :: {method}"
         
-        # Guardar la clase
+        # Guardar la clase en el diccionario
         self.classes[class_name] = {
             "super": super_name,
             "metodos": methods_table
@@ -87,7 +87,7 @@ def main():
                 else: # En caso de haber ingresado pocos argumentos
                     print("Error: número de argumentos erróneo")
             case "DESCRIBIR":
-                if len(parts) > 1:
+                if len(parts) == 2:
                     class_name = parts[1]
                     handler.describe_class(class_name)
                 else: # En caso de haber ingresado pocos argumentos
