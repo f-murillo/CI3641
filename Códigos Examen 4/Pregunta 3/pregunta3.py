@@ -7,7 +7,6 @@ class VirtualMethodTableHandler:
     def define_class(self, definition):
         """Método que define una clase"""
         parts = definition.split() # Dividimos la definición
-        class_name = parts[1] # Obtenemos el nombre de la clase
         
         if ":" in parts: # Si la definición tiene : , quiere decir que la clase hereda de otra
             class_name, super_name = parts[1], parts[3]
