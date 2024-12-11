@@ -69,7 +69,7 @@ El código del programa fue hecho en Python
 
     - NOTA: el comando (CLASE, DESCRIBIR o SALIR) deben escribirse en mayúsculas
 
-## Ejemplos de uso
+## Ejemplo de uso
 
 ```
 Ingresa una acción (CLASE, DESCRIBIR, SALIR): CLASE A wenas hellou
