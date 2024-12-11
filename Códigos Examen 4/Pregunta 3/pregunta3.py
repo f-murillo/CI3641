@@ -71,13 +71,13 @@ def main():
             case "CLASE":
                 if len(parts) > 2:
                     handler.define_class(action)
-                else: # En caso de haber ingresado menos de dos argumentos
+                else: # En caso de haber ingresado pocos argumentos
                     print("Error: número de argumentos erróneo")
             case "DESCRIBIR":
                 if len(parts) == 2:
                     class_name = parts[1]
                     handler.describe_class(class_name)
-                else: # En caso de haber ingresado un número de argumentos distintos de dos
+                else: # En caso de haber ingresado pocos argumentos
                     print("Error: número de argumentos erróneo")
             case "SALIR":
                 print("Saliendo del programa")
