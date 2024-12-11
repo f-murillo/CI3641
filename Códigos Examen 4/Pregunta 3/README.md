@@ -38,7 +38,7 @@ El código del programa fue hecho en Python
 
     - __OBSERVACION__: como el programa evita que se definan clases que ya existan o se definan clases que hereden de super clases que no han sido definidas, es imposible que se forme un ciclo de jerarquía de herencia, por lo que no es necesario verificar si se forma uno
 
-- __describe__: Describe una clase
+- __describe_class__: Describe una clase
 
     - Verifica si la clase dada existe
 
