@@ -7,7 +7,7 @@ class VirtualMethodTableHandler:
     def define_class(self, definition):
         """Método que define una clase"""
         parts = definition.split() # Dividimos la definición
-        
+                
         if ":" in parts: # Si la definición tiene : , quiere decir que la clase hereda de otra
             class_name, super_name = parts[1], parts[3]
             methods = parts[4:]
@@ -31,11 +31,6 @@ class VirtualMethodTableHandler:
             print(f"Error: Hay definiciones de métodos repetidas en {class_name}.")
             return
         
-        # Verificar ciclos en la jerarquía de herencia
-        if self._cicle_exists(class_name, super_name):
-            print(f"Error: Se genera un ciclo en la jerarquía de herencia con {class_name} y {super_name}.")
-            return
-        
         # Crear la tabla de métodos virtuales
         methods_table = {}
         if super_name: # Si la clase hereda de otra
@@ -52,7 +47,7 @@ class VirtualMethodTableHandler:
         }
         
         # Imprimir mensaje de exito
-        print(f"Clase {definition} creada exitosamente")
+        print(f"Clase {class_name} creada exitosamente")
 
     def describe_class(self, class_name):
         """Método que describe una clase"""
@@ -64,24 +59,16 @@ class VirtualMethodTableHandler:
         for method, implementation in methods_table.items(): # Para cada método e implementación en la tabla
             print(f"{method} -> {implementation}")
 
-    def _cicle_exists(self, class_name, super_name):
-        """Función que verifica si hay un ciclo de jerarquía de herencia"""
-        while super_name:
-            if super_name == class_name:
-                return True
-            super_name = self.classes.get(super_name, {}).get("super")
-        return False
-
 def main():
     """Método principal"""
     handler = VirtualMethodTableHandler()
     while True:
-        action = input("Ingrese una acción (CLASS, DESCRIBIR, SALIR): ")
+        action = input("Ingresa una acción (CLASE, DESCRIBIR, SALIR): ")
         parts = action.split()
-        comand = parts[0] if parts else None
+        command = parts[0] if parts else None
         
-        match comand:
-            case "CLASS":
+        match command:
+            case "CLASE":
                 if len(parts) > 2:
                     handler.define_class(action)
                 else: # En caso de haber ingresado pocos argumentos
