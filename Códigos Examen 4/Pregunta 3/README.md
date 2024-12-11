@@ -73,9 +73,9 @@ El código del programa fue hecho en Python
 
 ```
 Ingresa una acción (CLASE, DESCRIBIR, SALIR): CLASE A wenas hellou
-Clase CLASE A wenas hellou creada exitosamente
+Clase A creada exitosamente
 Ingresa una acción (CLASE, DESCRIBIR, SALIR): CLASE B : A a lo
-Clase CLASE B : A a lo creada exitosamente
+Clase B creada exitosamente
 Ingresa una acción (CLASE, DESCRIBIR, SALIR): DESCRIBIR A
 wenas -> A :: wenas
 hellou -> A :: hellou
@@ -85,8 +85,8 @@ hellou -> A :: hellou
 a -> B :: a
 lo -> B :: lo
 Ingresa una acción (CLASE, DESCRIBIR, SALIR): CLASE C : B ch a o
-Clase CLASE C : B ch a o creada exitosamente
-Ingresa una acción (CLASS, DESCRIBIR, SALIR): DESCRIBIR C
+Clase C creada exitosamente
+Ingresa una acción (CLASE, DESCRIBIR, SALIR): DESCRIBIR C
 wenas -> A :: wenas
 hellou -> A :: hellou
 a -> C :: a
