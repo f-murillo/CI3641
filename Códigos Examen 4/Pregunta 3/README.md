@@ -26,8 +26,6 @@ El código del programa fue hecho en Python
 
     - Verifica que no haya métodos duplicados en la definición
 
-    - Verifica que no se forme un ciclo de jerarquía de herencia entre la clase y la super clase
-
     - Crea un diccionario para la tabla de métodos para la clase
 
     - Si la clase a definir hereda de otra, se actualiza la tabla de métodos de la super clase (en caso de que se sobreescriban métodos)
@@ -38,6 +36,8 @@ El código del programa fue hecho en Python
 
     - Se imprime un mensaje de éxito
 
+    - __OBSERVACION__: como el programa evita que se definan clases que ya existan o se definan clases que hereden de super clases que no han sido definidas, es imposible que se forme un ciclo de jerarquía de herencia, por lo que no es necesario verificar si se forma uno
+
 - __describe__: Describe una clase
 
     - Verifica si la clase dada existe
@@ -45,16 +45,6 @@ El código del programa fue hecho en Python
     - Obtiene la tabla de métodos de la clase
 
     - Imprime cada método e implementación de la tabla
-
-- ___cicle_exists__: Verifica si existen ciclos de jerarquía de herencia de clases
-
-    - Mientras exista una super clase (en algún momento, debería llegar a None):
-
-        - Si la super clase tiene el mismo nombre de la clase, hay un ciclo de jerarquía; retorna True
-
-        - Si no, pasa a la siguiente super clase
-        
-    - Si se llegó a este punto, no hay ciclo; retorna False
 
 ### main
 - Método principal
