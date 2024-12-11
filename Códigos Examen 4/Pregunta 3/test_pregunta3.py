@@ -3,8 +3,9 @@ from unittest.mock import patch
 import pregunta3
 
 class TestManejador(unittest.TestCase):
-    
+    """Clase para los tests del manejador"""
     def setUp(self):
+        """Método que inicializa el manejador"""
         self.handler = pregunta3.VirtualMethodTableHandler()
         
     @patch('builtins.input', side_effect=[
