@@ -21,6 +21,7 @@ class TestManejador(unittest.TestCase):
         'DESCRIBIR A JAMON Y QUESO',
         'SALIR'
     ])
+    
     @patch('builtins.print')
     def test_main(self, mock_print, mock_input): # Se agrega un parámetro adicional por el funcionamiento del patch (éste inyecta parámetros adicionales)
         """Método que realiza la prueba del método main"""
