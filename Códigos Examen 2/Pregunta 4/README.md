@@ -6,6 +6,8 @@ Dado que en mi caso X = 7, Y = 8 y Z = 2, se tiene que:
 alpha = ((7+8) mod 5) + 3 = 3 ; beta = ((8+2) mod 5) + 3 = 3
 
 Por lo que f_alpha_beta = f_3_3, y es de la forma:
+
+$$ f_33
 ```
 f_3_3 = {
     n                                        , si 0 <= n < 9
