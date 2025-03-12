@@ -8,7 +8,7 @@ Se aumentó el límite en la cantidad de dígitos que se puede manejar en las co
 
 Observación: el código que calcula los números de la maldad fue implementado a partir del código escrito en Haskell para el reto del primer examen:
 
-```
+```haskell
 import Math.Combinatorics.Exact.Binomial(choose)
 import Data.Bits(shiftR)
 
