@@ -30,7 +30,7 @@ __trib__: calcula el n-ésimo número de tribonacci
 
 - Para poder mejorar la eficiencia del programa en general, era necesario hacer esta función lo más eficiente posible. Primero se obtuvo la forma recursiva de cola:
 
-```
+```python
 def trib_cola(n):
     def trib_aux(t1, t2, t3, i):
         if i == n:
@@ -71,7 +71,7 @@ Ejecución del programa
 ```
 - Desde un runner online: se recomienda ejecutarlo en ideone.com, indicando que el lenguaje a usar es Python 3. También se debe remover la importación y uso del módulo sys, el método main, e imprimir directamente maldad aplicado al número deseado. Esto es:
 
-```
+```python
 import math
 
 def trib(n):
