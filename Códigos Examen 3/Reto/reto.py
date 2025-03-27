@@ -1,6 +1,6 @@
 import math
 import sys
-sys.set_int_max_str_digits(10000)
+sys.set_int_max_str_digits(1000000000)
 
 def trib(n):
     """Método que calcula el n-ésimo número de tribonacci"""    
