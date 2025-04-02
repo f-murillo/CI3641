@@ -97,4 +97,4 @@ def maldad(n):
 
 print(maldad(<numero>))
 ```
-- OBSERVACION (luego de haberse evaluado ya el código): desgraciadamente, al eliminar el uso del módulo sys, se pierde por completo la capacidad de calcular números de maldad gigantes xd pero fue divertido hacerlo e interesante poder implementar la función de tribonacci de forma iterativa. Además, se probó aumentando el número de dígitos máximo a 1.000.000.000, y efectivamente calculó números de maldad del orden de 1x10^200 (lo cual me pareció bastante genial)
+- OBSERVACION (luego de haberse evaluado ya el código): desgraciadamente, al eliminar el uso del módulo sys, se pierde por completo la capacidad de calcular números de maldad gigantes xd pero fue divertido e interesante poder implementar la función de tribonacci de forma iterativa. Además, se probó aumentando el número de dígitos máximo a 1.000.000.000, y efectivamente calculó números de maldad del orden de 1x10^200 (lo cual me pareció bastante genial)
