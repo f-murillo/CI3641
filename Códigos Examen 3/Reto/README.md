@@ -97,3 +97,4 @@ def maldad(n):
 
 print(maldad(<numero>))
 ```
+- OBSERVACION (luego de haberse evaluado ya el código): desgraciadamente, al eliminar el uso del módulo sys, se pierde por completo la capacidad de calcular números de maldad gigantes xd pero fue divertido hacerlo, y de hecho hasta se probó aumentando 
