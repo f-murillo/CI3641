@@ -55,7 +55,12 @@ __maldad__: calcula el número de la maldad
 - No cambia su funcionamiento con respecto a la versión en Haskell
 - Declara una función interna que calcula el piso del logaritmo base 2, donde se hace uso de la función bit_length() de la clase int, la cual devuelve el número de bits necesarios para representar el entero en binario (sin incluir el bit del signo), y a dicho número se le resta 1
 - Hace uso de las funciones trib y narayana para el cálculo del número de la maldad
-
+- El retorno podría ser de la forma:
+```python
+  trib(pisoLog2(narayana(n, pisoLog2(n))) + 1)
+```
+- Pero ya no estamos ante un reto de ahorrar caracteres, por lo que se prefirió calcular cada parte por separado antes de retornar el resultado (era un poco enredado retornarlo así)
+  
 __OBSERVACION__
 - Se asume que n >= 2, ya que:
   - Si n = 1, pisoLog2(1) = 0, y en la función narayana(n,k) se intentaría calcular combinatorio(1, -1) (BOOM, explotó el programa)
